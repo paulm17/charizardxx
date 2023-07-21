@@ -1,0 +1,52 @@
+{
+  "name": "@charizardxx/core",
+  "version": "0.0.1",
+  "description": "Charizardxx UI core primitives",
+  "keywords": [
+    "system",
+    "styled-component",
+    "emotion",
+    "ui-component",
+    "ui",
+    "style-props",
+    "design-system"
+  ],
+  "sideEffects": false,
+  "author": "Me <me@hello.com>",
+  "homepage": "https://github.com/charizardxx/charizardxx#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charizardxx/charizardxx.git",
+    "directory": "packages/components/core"
+  },
+  "bugs": {
+    "url": "https://github.com/charizardxx/charizardxx/issues"
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "clean-package": "2.2.0"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}
