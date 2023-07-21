@@ -13,7 +13,5 @@
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
   "ignore": [
-    "create-react-app-ts",
-    "vite-ts"
   ]
 }
