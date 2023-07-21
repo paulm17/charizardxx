@@ -1,6 +1,6 @@
 {
   "name": "@charizardxx/server",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Charizardxx UI server",
   "keywords": [
     "system",
@@ -31,16 +31,16 @@
     "url": "https://github.com/charizardxx/charizardxx/issues"
   },
   "dependencies": {    
+    "@charizardxx/badge": "workspace:*",
+    "@charizardxx/button": "workspace:*"
   },
   "peerDependencies": {
-    "@charizardxx/badge": ">=0.0.1-alpha.3",
-    "@charizardxx/button": ">=0.0.1-alpha.3",
-    "react": ">=18"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
-    "@charizardxx/badge": "workspace:*",
-    "@charizardxx/button": "workspace:*",
     "react": "^18.2.0",
+    "react-dom": "^18.0.0",
     "clean-package": "2.2.0"
   },
   "scripts": {
