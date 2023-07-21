@@ -1,0 +1,53 @@
+{
+  "name": "@charizardxx/button",
+  "version": "0.0.1",
+  "description": "A React component that is a base button.",
+  "keywords": [
+    "button",
+    "button-group",
+    "react",
+    "component",
+    "clickable",
+    "tabbable"
+  ],
+  "sideEffects": false,
+  "author": "Me <me@hello.com>",
+  "homepage": "https://github.com/charizardxx/charizardxx#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charizardxx/charizardxx.git",
+    "directory": "packages/components/button"
+  },
+  "bugs": {
+    "url": "https://github.com/charizardxx/charizardxx/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@charizardxx/core": "workspace:*",
+    "react": "^18.0.0"
+  },
+  "peerDependencies": {
+    "@charizardxx/core": ">=0.0.0",
+    "react": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore",
+    "typedocs": "tsx ../../../scripts/generate-type-docs.ts"
+  },
+  "clean-package": "../../../clean-package.config.json"
+}

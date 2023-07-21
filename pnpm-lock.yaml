@@ -96,6 +96,14 @@ importers:
       unbuild: 0.7.4
       vite: 4.4.6_@types+node@18.16.19
 
+  packages/components/badge:
+    specifiers:
+      '@charizardxx/core': workspace:*
+      react: ^18.2.0
+    devDependencies:
+      '@charizardxx/core': link:../../core
+      react: 18.2.0
+
   packages/components/button:
     specifiers:
       '@charizardxx/core': workspace:*
