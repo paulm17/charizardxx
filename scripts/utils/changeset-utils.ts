@@ -14,9 +14,9 @@ const padStart = (text: string, length: number, char: string) => {
   return text.padStart(length, char)
 }
 
-export const reactPkg = "@charizardxx-ui/react"
+export const reactPkg = "@charizardxx/react"
 
-export const docsPkg = "@charizardxx-ui/docs"
+export const docsPkg = "@charizardxx/docs"
 
 export function getPackageName(name: string) {
   return startCase(name.replace("@charizardxx-ui/", ""))
