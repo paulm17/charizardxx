@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/button.tsx"],"sourcesContent":["import { Factory } from \"@charizardxx/core\"\n\nfunction Button() {\n  return <Factory>hello button</Factory>\n}\n\nexport { Button }\n"],"mappings":";;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,kBAAwB;AAGf;AADT,SAAS,SAAS;AAChB,SAAO,4CAAC,uBAAQ,0BAAY;AAC9B;","names":[]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/badge.tsx"],"sourcesContent":["import { Factory } from \"@charizardxx/core\"\n\nfunction Badge() {\n  return <Factory>hello badge - A90123-4</Factory>\n}\n\nexport { Badge }\n"],"mappings":";;;AAAA,SAAS,eAAe;AAGf;AADT,SAAS,QAAQ;AACf,SAAO,oBAAC,WAAQ,oCAAsB;AACxC;","names":[]}

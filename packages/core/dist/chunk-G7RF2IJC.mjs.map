@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/factory/factory.tsx"],"sourcesContent":["import { ReactNode } from \"react\"\n\ninterface factoryProps {\n  children: ReactNode\n}\n\nfunction Factory({ children }: factoryProps) {\n  return <>{children}</>\n}\n\nexport { Factory }\n"],"mappings":";;;AAOS;AADT,SAAS,QAAQ,EAAE,SAAS,GAAiB;AAC3C,SAAO,gCAAG,UAAS;AACrB;","names":[]}

@@ -1,1 +1,1 @@
-export { Factory } from "./factory"
+export * from "./factory"
