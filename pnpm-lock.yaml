@@ -136,10 +136,9 @@ importers:
       '@charizardxx/button': workspace:*
       clean-package: 2.2.0
       react: ^18.2.0
-    dependencies:
+    devDependencies:
       '@charizardxx/badge': link:../components/badge
       '@charizardxx/button': link:../components/button
-    devDependencies:
       clean-package: 2.2.0
       react: 18.2.0
 
