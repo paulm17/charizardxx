@@ -105,17 +105,21 @@ importers:
   packages/components/badge:
     specifiers:
       '@charizardxx/core': workspace:*
+      clean-package: 2.2.0
       react: ^18.2.0
     devDependencies:
       '@charizardxx/core': link:../../core
+      clean-package: 2.2.0
       react: 18.2.0
 
   packages/components/button:
     specifiers:
       '@charizardxx/core': workspace:*
+      clean-package: 2.2.0
       react: ^18.2.0
     devDependencies:
       '@charizardxx/core': link:../../core
+      clean-package: 2.2.0
       react: 18.2.0
 
   packages/core:
