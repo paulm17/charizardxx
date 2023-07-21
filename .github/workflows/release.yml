@@ -4,7 +4,6 @@ on:
   push:
     paths:
       - ".changeset/**"
-      - "tooling/**"
       - "packages/**"
     branches:
       - main
@@ -17,6 +16,9 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - name: Install
+        uses: ./.github/composite-actions/install
+        
       - name: Build
         run: pnpm build
 
