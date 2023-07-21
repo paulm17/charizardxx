@@ -1,7 +1,7 @@
 import { Factory } from "@charizardxx/core"
 
 function Badge() {
-  return <Factory>hello badge - A67890</Factory>
+  return <Factory>hello badge - A01234</Factory>
 }
 
 export { Badge }
