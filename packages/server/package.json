@@ -44,7 +44,8 @@
     "clean-package": "2.2.0"
   },
   "scripts": {
-    "build": "tsup src --dts",
+    "build": "tsup src --dts && echo $HOME && build:app",
+    "build:app": "src/app",
     "dev": "pnpm build:fast -- --watch",
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
