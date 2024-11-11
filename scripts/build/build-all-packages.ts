@@ -35,8 +35,8 @@ export async function buildAllPackages() {
 const priorityPackages = [
   '@charizardxx/hooks',
   '@charizardxx/ripple',
-  '@charizardxx/core',
   '@charizardxx/system',
+  '@charizardxx/core',
   '@charizardxx/emotion',
 ];
 
