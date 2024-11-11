@@ -1,0 +1,92 @@
+/* ----- CSS reset ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+/* ----- Global styles ----- */
+body {
+  margin: 0;
+  font-family: var(--charizardxx-font-family);
+  font-size: var(--charizardxx-font-size-md);
+  line-height: var(--charizardxx-line-height);
+  background-color: var(--charizardxx-color-body);
+  color: var(--charizardxx-color-text);
+
+  -webkit-font-smoothing: var(--charizardxx-webkit-font-smoothing);
+  -moz-osx-font-smoothing: var(--charizardxx-moz-font-smoothing);
+
+  @media screen and (max-device-width: em(500px)) {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+[data-respect-reduced-motion] {
+  @media (prefers-reduced-motion: reduce) {
+    [data-reduce-motion] {
+      transition: none;
+      animation: none;
+    }
+  }
+}
+
+.charizardxx-light-hidden {
+  [data-charizardxx-color-scheme='light'] {
+    display: none;
+  }
+}
+
+.charizardxx-dark-hidden {
+  [data-charizardxx-color-scheme='dark'] {
+    display: none;
+  }
+}
+
+.charizardxx-focus-auto {
+  &:focus-visible {
+    outline: 2px solid var(--charizardxx-primary-color-filled);
+    outline-offset: 2px;
+  }
+}
+
+.charizardxx-focus-always {
+  &:focus {
+    outline: 2px solid var(--charizardxx-primary-color-filled);
+    outline-offset: 2px;
+  }
+}
+
+.charizardxx-focus-never {
+  &:focus {
+    outline: none;
+  }
+}
+
+.charizardxx-active {
+  &:active {
+    transform: translateY(rem(1px));
+  }
+
+  fieldset:disabled &:active {
+    transform: none;
+  }
+}
+
+.charizardxx-rotate-rtl {
+  [dir='rtl'] {
+    transform: rotate(180deg);
+  }
+}
