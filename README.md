@@ -6,7 +6,7 @@
   <a href="https://github.com/paulm17/charizardxx">
     <img src="./images/logo.png" alt="Logo">
   </a>
-  <h3 align="center">RAIKOU</h3>
+  <h3 align="center">CHARIZARDXX</h3>
   <p align="center">
     Charizardxx is a mantine fork which replaces css modules to adopt a unocss first-use approach.
   </p>
