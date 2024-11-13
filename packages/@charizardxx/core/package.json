@@ -1,6 +1,6 @@
 {
   "name": "@charizardxx/core",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "React components library focused on usability, accessibility and developer experience",
   "homepage": "https://mantine.dev/",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "directory": "packages/@charizardxx/core"
   },
   "peerDependencies": {
-    "@charizardxx/hooks": "0.0.9",
+    "@charizardxx/hooks": "0.0.10",
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"
   },
