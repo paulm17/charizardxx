@@ -1,14 +1,14 @@
 import {
   Box,
   BoxProps,
-  CharizardxxColor,
-  CharizardxxGradient,
-  CharizardxxRadius,
-  CharizardxxSize,
   createVarsResolver,
   getRadius,
   getSize,
   getThemeColor,
+  MantineColor,
+  MantineGradient,
+  MantineRadius,
+  MantineSize,
   polymorphicFactory,
   PolymorphicFactory,
   StylesApiProps,
@@ -42,19 +42,19 @@ export type BadgeCssVariables = {
 
 export interface BadgeProps extends BoxProps, StylesApiProps<BadgeFactory> {
   /** Controls `font-size`, `height` and horizontal `padding`, `'md'` by default */
-  size?: CharizardxxSize | (string & {});
+  size?: MantineSize | (string & {});
 
   /** If set, badge `min-width` becomes equal to its `height` and horizontal padding is removed */
   circle?: boolean;
 
   /** Key of `theme.radius` or any valid CSS value to set `border-radius`, `'xl'` by default */
-  radius?: CharizardxxRadius;
+  radius?: MantineRadius;
 
   /** Key of `theme.colors` or any valid CSS color, `theme.primaryColor` by default */
-  color?: CharizardxxColor;
+  color?: MantineColor;
 
   /** Gradient configuration used when `variant="gradient"`, default value is `theme.defaultGradient` */
-  gradient?: CharizardxxGradient;
+  gradient?: MantineGradient;
 
   /** Content displayed on the left side of the badge label */
   leftSection?: React.ReactNode;
@@ -111,7 +111,7 @@ const varsResolver = createVarsResolver<BadgeFactory>(
 export const Badge = polymorphicFactory<BadgeFactory>((_props, ref) => {
   const props = useProps('Badge', defaultProps, _props);
   const {
-    // classNames,
+    classNames,
     className,
     style,
     styles,
@@ -141,6 +141,7 @@ export const Badge = polymorphicFactory<BadgeFactory>((_props, ref) => {
     },
     className,
     style,
+    classNames,
     styles,
     unstyled,
     vars,

@@ -1,5 +1,4 @@
 import { act, renderHook } from '@testing-library/react';
-import { vi } from 'vitest';
 import { usePagination } from './use-pagination';
 
 describe('@charizardxx/hooks/use-pagination', () => {
@@ -46,7 +45,7 @@ describe('@charizardxx/hooks/use-pagination', () => {
   });
 
   it('calls onChange correctly with active page', () => {
-    const spy = vi.fn();
+    const spy = jest.fn();
     const { result } = renderHook(() =>
       usePagination({
         page: 7,

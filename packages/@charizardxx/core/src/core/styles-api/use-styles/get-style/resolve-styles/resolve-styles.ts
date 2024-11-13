@@ -1,8 +1,8 @@
-import type { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import type { MantineTheme } from '../../../../MantineProvider';
 import type { _Styles } from '../get-style';
 
 export interface ResolveStylesInput {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   styles: _Styles | _Styles[];
   props: Record<string, any>;
   stylesCtx: Record<string, any> | undefined;

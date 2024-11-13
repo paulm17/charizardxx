@@ -1,7 +1,20 @@
 {
   "name": "@charizardxx/hooks",
-  "version": "0.0.8",
+  "version": "7.14.0",
+  "description": "A collection of 50+ hooks for state and UI management",
+  "homepage": "https://mantine.dev",
   "license": "MIT",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "keywords": [
+    "frontend",
+    "hooks",
+    "library",
+    "next",
+    "nextjs",
+    "react",
+    "react-hooks",
+    "state"
+  ],
   "sideEffects": false,
   "main": "./cjs/index.cjs",
   "module": "./esm/index.mjs",
@@ -18,10 +31,12 @@
       }
     }
   },
-  "peerDependencies": {
-    "react": "^18.2.0"
+  "repository": {
+    "url": "https://github.com/mantinedev/mantine.git",
+    "type": "git",
+    "directory": "packages/@charizardxx/hooks"
   },
-  "publishConfig": {
-    "access": "public"
+  "peerDependencies": {
+    "react": "^18.x || ^19.x"
   }
 }

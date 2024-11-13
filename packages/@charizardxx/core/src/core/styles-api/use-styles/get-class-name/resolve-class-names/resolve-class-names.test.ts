@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { resolveClassNames } from './resolve-class-names';
 
 describe('@charizardxx/core/resolve-class-names', () => {

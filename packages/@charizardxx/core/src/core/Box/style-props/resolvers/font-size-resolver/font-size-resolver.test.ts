@@ -1,19 +1,19 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { rem } from '../../../../utils';
 import { fontSizeResolver } from './font-size-resolver';
 
 describe('@charizardxx/core/Box/font-size-resolver', () => {
   it('resolves theme font size', () => {
-    expect(fontSizeResolver('xs', DEFAULT_THEME)).toBe('var(--charizardxx-font-size-xs)');
-    expect(fontSizeResolver('sm', DEFAULT_THEME)).toBe('var(--charizardxx-font-size-sm)');
-    expect(fontSizeResolver('md', DEFAULT_THEME)).toBe('var(--charizardxx-font-size-md)');
-    expect(fontSizeResolver('lg', DEFAULT_THEME)).toBe('var(--charizardxx-font-size-lg)');
-    expect(fontSizeResolver('xl', DEFAULT_THEME)).toBe('var(--charizardxx-font-size-xl)');
+    expect(fontSizeResolver('xs', DEFAULT_THEME)).toBe('var(--mantine-font-size-xs)');
+    expect(fontSizeResolver('sm', DEFAULT_THEME)).toBe('var(--mantine-font-size-sm)');
+    expect(fontSizeResolver('md', DEFAULT_THEME)).toBe('var(--mantine-font-size-md)');
+    expect(fontSizeResolver('lg', DEFAULT_THEME)).toBe('var(--mantine-font-size-lg)');
+    expect(fontSizeResolver('xl', DEFAULT_THEME)).toBe('var(--mantine-font-size-xl)');
   });
 
   it('resolves number font size', () => {
-    expect(fontSizeResolver(12, DEFAULT_THEME)).toBe('calc(0.75rem * var(--charizardxx-scale))');
-    expect(fontSizeResolver(32, DEFAULT_THEME)).toBe('calc(2rem * var(--charizardxx-scale))');
+    expect(fontSizeResolver(12, DEFAULT_THEME)).toBe('calc(0.75rem * var(--mantine-scale))');
+    expect(fontSizeResolver(32, DEFAULT_THEME)).toBe('calc(2rem * var(--mantine-scale))');
   });
 
   it('resolves string font size', () => {

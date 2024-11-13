@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../MantineProvider';
 import { STYlE_PROPS_DATA } from '../style-props-data';
 import { parseStyleProps } from './parse-style-props';
 
@@ -13,10 +13,9 @@ describe('@charizardxx/core/Box/parse-style-props', () => {
     ).toStrictEqual({
       hasResponsiveStyles: false,
       inlineStyles: {
-        padding: 'calc(1.5rem * var(--charizardxx-scale))',
-        marginLeft: 'calc(2rem * var(--charizardxx-scale))',
-        marginRight: 'calc(2rem * var(--charizardxx-scale))',
-        color: 'var(--charizardxx-color-red-5)',
+        padding: 'calc(1.5rem * var(--mantine-scale))',
+        marginInline: 'calc(2rem * var(--mantine-scale))',
+        color: 'var(--mantine-color-red-5)',
         opacity: 0.65,
       },
       styles: {},
@@ -40,20 +39,18 @@ describe('@charizardxx/core/Box/parse-style-props', () => {
       hasResponsiveStyles: true,
       inlineStyles: {},
       styles: {
-        padding: 'calc(1.5rem * var(--charizardxx-scale))',
-        marginLeft: 'calc(2rem * var(--charizardxx-scale))',
-        marginRight: 'calc(2rem * var(--charizardxx-scale))',
-        color: 'var(--charizardxx-color-red-5)',
+        padding: 'calc(1.5rem * var(--mantine-scale))',
+        marginInline: 'calc(2rem * var(--mantine-scale))',
+        color: 'var(--mantine-color-red-5)',
         opacity: 0.65,
       },
       media: [
         {
           query: `(min-width: ${DEFAULT_THEME.breakpoints.xs})`,
           styles: {
-            padding: 'calc(2rem * var(--charizardxx-scale))',
-            marginLeft: 'calc(4rem * var(--charizardxx-scale))',
-            marginRight: 'calc(4rem * var(--charizardxx-scale))',
-            color: 'var(--charizardxx-color-red-6)',
+            padding: 'calc(2rem * var(--mantine-scale))',
+            marginInline: 'calc(4rem * var(--mantine-scale))',
+            color: 'var(--mantine-color-red-6)',
             opacity: 0.85,
           },
         },
@@ -76,19 +73,18 @@ describe('@charizardxx/core/Box/parse-style-props', () => {
     ).toStrictEqual({
       hasResponsiveStyles: true,
       inlineStyles: {
-        marginLeft: 'calc(4rem * var(--charizardxx-scale))',
-        marginRight: 'calc(4rem * var(--charizardxx-scale))',
-        color: 'var(--charizardxx-color-red-6)',
+        marginInline: 'calc(4rem * var(--mantine-scale))',
+        color: 'var(--mantine-color-red-6)',
       },
       styles: {
-        padding: 'calc(1.5rem * var(--charizardxx-scale))',
+        padding: 'calc(1.5rem * var(--mantine-scale))',
         opacity: 0.65,
       },
       media: [
         {
           query: `(min-width: ${DEFAULT_THEME.breakpoints.xs})`,
           styles: {
-            padding: 'calc(2rem * var(--charizardxx-scale))',
+            padding: 'calc(2rem * var(--mantine-scale))',
             opacity: 0.85,
           },
         },
@@ -112,30 +108,27 @@ describe('@charizardxx/core/Box/parse-style-props', () => {
       hasResponsiveStyles: true,
       inlineStyles: {},
       styles: {
-        padding: 'calc(1.5rem * var(--charizardxx-scale))',
-        marginLeft: 'calc(2rem * var(--charizardxx-scale))',
-        marginRight: 'calc(2rem * var(--charizardxx-scale))',
-        color: 'var(--charizardxx-color-red-5)',
+        padding: 'calc(1.5rem * var(--mantine-scale))',
+        marginInline: 'calc(2rem * var(--mantine-scale))',
+        color: 'var(--mantine-color-red-5)',
         opacity: 0.65,
       },
       media: [
         {
           query: `(min-width: ${DEFAULT_THEME.breakpoints.xs})`,
           styles: {
-            padding: 'calc(2rem * var(--charizardxx-scale))',
-            marginLeft: 'calc(4rem * var(--charizardxx-scale))',
-            marginRight: 'calc(4rem * var(--charizardxx-scale))',
-            color: 'var(--charizardxx-color-red-6)',
+            padding: 'calc(2rem * var(--mantine-scale))',
+            marginInline: 'calc(4rem * var(--mantine-scale))',
+            color: 'var(--mantine-color-red-6)',
             opacity: 0.85,
           },
         },
         {
           query: `(min-width: ${DEFAULT_THEME.breakpoints.md})`,
           styles: {
-            padding: 'calc(3rem * var(--charizardxx-scale))',
-            marginLeft: 'calc(8rem * var(--charizardxx-scale))',
-            marginRight: 'calc(8rem * var(--charizardxx-scale))',
-            color: 'var(--charizardxx-color-red-7)',
+            padding: 'calc(3rem * var(--mantine-scale))',
+            marginInline: 'calc(8rem * var(--mantine-scale))',
+            color: 'var(--mantine-color-red-7)',
             opacity: 1,
           },
         },

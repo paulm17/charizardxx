@@ -1,4 +1,3 @@
-import React from 'react';
 import { render, screen, tests } from '@charizardxx-tests/core';
 import { Box, BoxProps } from './Box';
 
@@ -8,6 +7,7 @@ describe('@charizardxx/core/Box', () => {
   tests.itSupportsSystemProps<BoxProps>({
     component: Box,
     props: defaultProps,
+    mod: true,
     polymorphic: true,
     styleProps: true,
     children: true,

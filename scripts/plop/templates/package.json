@@ -2,9 +2,9 @@
   "name": "{{package}}",
   "version": "1.0.0",
   "description": "{{description}}",
-  "homepage": "https://github.com/paulm17/charizardxx",
+  "homepage": "https://mantine.dev/",
   "license": "MIT",
-  "author": "Paul Moss",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "keywords": [
     "react",
     "ui"
@@ -30,17 +30,18 @@
     "./styles.layer.css": "./styles.layer.css"
   },
   "repository": {
-    "url": "https://github.com/paulm17/charizardxx.git",
+    "url": "https://github.com/mantinedev/mantine.git",
     "type": "git",
     "directory": "packages/{{package}}"
   },
   "peerDependencies": {
-    "@charizardxx/core": "workspace:*",
-    "@charizardxx/hooks": "workspace:*",
+    "@charizardxx/core": ">=7.0.0",
+    "@charizardxx/hooks": ">=7.0.0",
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"
   },
   "devDependencies": {
+    "@charizardxx-tests/core": "workspace:*",
     "@charizardxx/core": "workspace:*",
     "@charizardxx/hooks": "workspace:*"
   }

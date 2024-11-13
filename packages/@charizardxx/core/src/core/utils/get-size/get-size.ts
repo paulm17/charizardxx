@@ -14,23 +14,23 @@ export function getSize(size: unknown, prefix = 'size', convertToRem = true): st
 }
 
 export function getSpacing(size: unknown) {
-  return getSize(size, 'charizardxx-spacing');
+  return getSize(size, 'mantine-spacing');
 }
 
 export function getRadius(size: unknown) {
   if (size === undefined) {
-    return 'var(--charizardxx-radius-default)';
+    return 'var(--mantine-radius-default)';
   }
 
-  return getSize(size, 'charizardxx-radius');
+  return getSize(size, 'mantine-radius');
 }
 
 export function getFontSize(size: unknown) {
-  return getSize(size, 'charizardxx-font-size');
+  return getSize(size, 'mantine-font-size');
 }
 
 export function getLineHeight(size: unknown) {
-  return getSize(size, 'charizardxx-line-height', false);
+  return getSize(size, 'mantine-line-height', false);
 }
 
 export function getShadow(size: unknown) {
@@ -38,5 +38,5 @@ export function getShadow(size: unknown) {
     return undefined;
   }
 
-  return getSize(size, 'charizardxx-shadow', false);
+  return getSize(size, 'mantine-shadow', false);
 }

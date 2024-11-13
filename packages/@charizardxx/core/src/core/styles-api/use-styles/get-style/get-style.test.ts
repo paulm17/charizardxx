@@ -1,7 +1,7 @@
-import { CharizardxxTheme, DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME, MantineTheme } from '../../../MantineProvider';
 import { getStyle, GetStyleInput } from './get-style';
 
-const THEME_WITH_STYLES: CharizardxxTheme = {
+const THEME_WITH_STYLES: MantineTheme = {
   ...DEFAULT_THEME,
   components: {
     TestComponentObject: {
@@ -11,7 +11,7 @@ const THEME_WITH_STYLES: CharizardxxTheme = {
     },
 
     TestComponentFunction: {
-      styles: (theme: CharizardxxTheme, props: Record<string, any>) => ({
+      styles: (theme: MantineTheme, props: Record<string, any>) => ({
         root: { background: props['data-color'], outlineColor: theme.colors.red[0] },
       }),
     },

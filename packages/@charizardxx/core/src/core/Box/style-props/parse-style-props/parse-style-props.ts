@@ -1,8 +1,8 @@
-import { CharizardxxTheme } from '../../../CharizardxxProvider';
+import { MantineTheme } from '../../../MantineProvider';
 import { keys } from '../../../utils';
 import { resolvers } from '../resolvers';
 import type { SystemPropData } from '../style-props-data';
-import type { CharizardxxStyleProps, StyleProp } from '../style-props.types';
+import type { StyleProp } from '../style-props.types';
 import { sortMediaQueries, SortMediaQueriesResult } from './sort-media-queries';
 
 function hasResponsiveStyles(styleProp: StyleProp<unknown>) {
@@ -48,8 +48,8 @@ function getBreakpointValue(value: StyleProp<unknown>, breakpoint: string) {
 }
 
 interface ParseStylePropsOptions {
-  styleProps: CharizardxxStyleProps;
-  theme: CharizardxxTheme;
+  styleProps: Record<string, StyleProp<any>>;
+  theme: MantineTheme;
   data: Record<string, SystemPropData>;
 }
 

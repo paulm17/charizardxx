@@ -6,9 +6,9 @@ describe('@charizardxx/core/get-static-class-names', () => {
       getStaticClassNames({
         themeName: ['Input'],
         selector: 'wrapper',
-        classNamesPrefix: 'charizardxx',
+        classNamesPrefix: 'mantine',
       })
-    ).toStrictEqual(['charizardxx-Input-wrapper']);
+    ).toStrictEqual(['mantine-Input-wrapper']);
   });
 
   it('returns correct static class names for multiple themeNames', () => {
@@ -16,9 +16,9 @@ describe('@charizardxx/core/get-static-class-names', () => {
       getStaticClassNames({
         themeName: ['Input', 'Select'],
         selector: 'wrapper',
-        classNamesPrefix: 'charizardxx',
+        classNamesPrefix: 'mantine',
       })
-    ).toStrictEqual(['charizardxx-Input-wrapper', 'charizardxx-Select-wrapper']);
+    ).toStrictEqual(['mantine-Input-wrapper', 'mantine-Select-wrapper']);
   });
 
   it('returns empty array if withStaticClass is false', () => {
@@ -26,7 +26,7 @@ describe('@charizardxx/core/get-static-class-names', () => {
       getStaticClassNames({
         themeName: ['Input', 'Select'],
         selector: 'wrapper',
-        classNamesPrefix: 'charizardxx',
+        classNamesPrefix: 'mantine',
         withStaticClass: false,
       })
     ).toStrictEqual([]);

@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react';
-import { vi } from 'vitest';
 import { createOptionalContext } from './create-optional-context';
 
 interface ContextType {
@@ -9,7 +8,7 @@ interface ContextType {
 
 describe('@charizardxx/core/create-optional-context', () => {
   it('returns context value when useSafeContext hook was called within Provider', () => {
-    const fn = vi.fn();
+    const fn = jest.fn();
     const [Provider, useContext] = createOptionalContext<ContextType>();
     const wrapper = ({ children }: { children: React.ReactNode }) => (
       <Provider value={{ value: 100, onChange: fn }}>{children}</Provider>

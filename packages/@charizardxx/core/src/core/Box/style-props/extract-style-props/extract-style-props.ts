@@ -1,9 +1,9 @@
 import { filterProps } from '../../../utils';
-import type { CharizardxxStyleProps } from '../style-props.types';
+import type { MantineStyleProps } from '../style-props.types';
 
 export function extractStyleProps<T extends Record<string, any>>(
-  others: CharizardxxStyleProps & T
-): { styleProps: CharizardxxStyleProps & { sx?: any }; rest: T } {
+  others: MantineStyleProps & T
+): { styleProps: MantineStyleProps & { sx?: any }; rest: T } {
   const {
     m,
     mx,

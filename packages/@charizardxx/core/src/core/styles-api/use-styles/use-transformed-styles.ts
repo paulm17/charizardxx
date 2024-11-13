@@ -1,4 +1,4 @@
-import { useCharizardxxTheme } from '../../CharizardxxProvider';
+import { useMantineStylesTransform, useMantineTheme } from '../../MantineProvider';
 
 interface UseTransformedStylesInput {
   props: Record<string, any>;
@@ -7,9 +7,8 @@ interface UseTransformedStylesInput {
 }
 
 export function useStylesTransform({ props, stylesCtx, themeName }: UseTransformedStylesInput) {
-  const theme = useCharizardxxTheme();
-  // @ts-ignore
-  const stylesTransform = (window as any).charizardxx_styles_transform.styles();
+  const theme = useMantineTheme();
+  const stylesTransform = useMantineStylesTransform()?.();
 
   const getTransformedStyles = (styles: any[]) => {
     if (!stylesTransform) {

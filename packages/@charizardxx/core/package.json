@@ -1,8 +1,24 @@
 {
   "name": "@charizardxx/core",
+  "version": "7.14.0",
   "description": "React components library focused on usability, accessibility and developer experience",
+  "homepage": "https://mantine.dev/",
   "license": "MIT",
-  "version": "0.0.8",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com>",
+  "keywords": [
+    "components",
+    "design",
+    "frontend",
+    "library",
+    "next",
+    "nextjs",
+    "react",
+    "ui",
+    "ui-kit"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
   "main": "./cjs/index.cjs",
   "module": "./esm/index.mjs",
   "types": "./lib/index.d.ts",
@@ -16,29 +32,31 @@
         "types": "./lib/index.d.ts",
         "default": "./cjs/index.cjs"
       }
-    }
+    },
+    "./styles.css": "./styles.css",
+    "./styles.layer.css": "./styles.layer.css",
+    "./styles/*": "./styles/*"
   },
-  "sideEffects": [
-    "*.css"
-  ],
+  "repository": {
+    "url": "https://github.com/mantinedev/mantine.git",
+    "type": "git",
+    "directory": "packages/@charizardxx/core"
+  },
   "peerDependencies": {
-    "@charizardxx/ripple": "0.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@charizardxx/hooks": "7.14.0",
+    "react": "^18.x || ^19.x",
+    "react-dom": "^18.x || ^19.x"
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.27",
     "clsx": "^2.1.1",
     "react-number-format": "^5.4.2",
     "react-remove-scroll": "^2.6.0",
-    "react-textarea-autosize": "^8.5.4",
+    "react-textarea-autosize": "8.5.4",
     "type-fest": "^4.26.1"
   },
   "devDependencies": {
-    "@charizardxx/hooks": "workspace:*",
-    "@charizardxx/ripple": "workspace:*"
-  },
-  "publishConfig": {
-    "access": "public"
+    "@charizardxx-tests/core": "workspace:*",
+    "@charizardxx/hooks": "workspace:*"
   }
 }

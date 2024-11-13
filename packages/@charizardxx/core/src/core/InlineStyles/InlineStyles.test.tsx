@@ -1,12 +1,11 @@
-import React from 'react';
 import { render } from '@charizardxx-tests/core';
 import { InlineStyles } from './InlineStyles';
 
 describe('@charizardxx/core/InlineStyles', () => {
   it('renders styles', () => {
     const { container } = render(<InlineStyles selector="body" styles={{ color: 'red' }} />);
-    expect(container.querySelector('[data-charizardxx-styles="inline"]')).toHaveTextContent(
-      'body { color: red; }'
+    expect(container.querySelector('[data-mantine-styles="inline"]')).toHaveTextContent(
+      'body{color:red;}'
     );
   });
 
@@ -15,11 +14,24 @@ describe('@charizardxx/core/InlineStyles', () => {
       <InlineStyles
         selector="body"
         styles={{ color: 'red' }}
-        media={[{ query: '(min-width: 500px)', styles: { color: 'blue' } }]}
+        media={[{ query: '(min-width:500px)', styles: { color: 'blue' } }]}
       />
     );
-    expect(container.querySelector('[data-charizardxx-styles="inline"]')).toHaveTextContent(
-      'body { color: red; } @media (min-width: 500px) { body { color: blue; } }'
+    expect(container.querySelector('[data-mantine-styles="inline"]')).toHaveTextContent(
+      'body{color:red;}@media(min-width:500px){body{color:blue;}}'
+    );
+  });
+
+  it('renders container styles', () => {
+    const { container } = render(
+      <InlineStyles
+        selector="body"
+        styles={{ color: 'red' }}
+        container={[{ query: 'aside (min-width:500px)', styles: { color: 'blue' } }]}
+      />
+    );
+    expect(container.querySelector('[data-mantine-styles="inline"]')).toHaveTextContent(
+      'body{color:red;}@container aside (min-width:500px){body{color:blue;}}'
     );
   });
 });

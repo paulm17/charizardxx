@@ -2,7 +2,6 @@ import packageJson from '../../../package.json';
 import { getPackagesList } from '../../packages/get-packages-list';
 
 export const ROLLUP_EXTERNALS = [
-  // default
   'dayjs/locale/ru',
   'dayjs/plugin/customParseFormat.js',
   'dayjs/plugin/customParseFormat',
@@ -12,7 +11,6 @@ export const ROLLUP_EXTERNALS = [
   'highlight.js/lib/languages/typescript',
   'react-is',
   'react/jsx-runtime',
-
   ...getPackagesList().map((pkg) => pkg.packageJson.name!),
   ...Object.keys({
     ...packageJson.devDependencies,

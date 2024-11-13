@@ -1,8 +1,8 @@
-import { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import { MantineTheme } from '../../../../MantineProvider';
 import { resolveClassNames } from '../resolve-class-names/resolve-class-names';
 
 interface GetThemeClassNamesOptions {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   themeName: string[];
   selector: string;
   props: Record<string, any>;
@@ -17,11 +17,10 @@ export function getThemeClassNames({
   stylesCtx,
 }: GetThemeClassNamesOptions) {
   return themeName.map(
-    () =>
+    (n) =>
       resolveClassNames({
         theme,
-        // classNames: theme.components[n]?.classNames,
-        classNames: [],
+        classNames: theme.components[n]?.classNames,
         props,
         stylesCtx,
       })?.[selector]

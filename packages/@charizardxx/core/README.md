@@ -1,6 +1,10 @@
-# Charizardxx core
+# Mantine core
 
-Charizardxx core components library.
+[![npm](https://img.shields.io/npm/dm/@charizardxx/core)](https://www.npmjs.com/package/@charizardxx/core)
+
+Mantine core components library.
+
+[View documentation](https://mantine.dev/)
 
 ## Installation
 

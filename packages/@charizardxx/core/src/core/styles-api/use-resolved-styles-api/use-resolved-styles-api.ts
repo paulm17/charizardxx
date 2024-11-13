@@ -1,5 +1,5 @@
-import { useCharizardxxTheme } from '../../CharizardxxProvider';
 import { FactoryPayload } from '../../factory';
+import { useMantineTheme } from '../../MantineProvider';
 import { ClassNames, Styles } from '../styles-api.types';
 import { resolveClassNames } from '../use-styles/get-class-name/resolve-class-names/resolve-class-names';
 import { resolveStyles } from '../use-styles/get-style/resolve-styles/resolve-styles';
@@ -17,7 +17,8 @@ export function useResolvedStylesApi<Payload extends FactoryPayload>({
   props,
   stylesCtx,
 }: UseResolvedStylesApiInput<Payload>) {
-  const theme = useCharizardxxTheme();
+  const theme = useMantineTheme();
+
   return {
     resolvedClassNames: resolveClassNames({
       theme,

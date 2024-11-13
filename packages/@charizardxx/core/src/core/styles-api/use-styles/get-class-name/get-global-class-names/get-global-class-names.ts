@@ -1,17 +1,17 @@
 import cx from 'clsx';
-import { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import { MantineTheme } from '../../../../MantineProvider';
 import { GetStylesApiOptions } from '../../../styles-api.types';
 
 interface GetGlobalClassNamesOptions {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   unstyled: boolean | undefined;
   options: GetStylesApiOptions | undefined;
 }
 
 export const FOCUS_CLASS_NAMES = {
-  always: 'charizardxx-focus-always',
-  auto: 'charizardxx-focus-auto',
-  never: 'charizardxx-focus-never',
+  always: 'mantine-focus-always',
+  auto: 'mantine-focus-auto',
+  never: 'mantine-focus-never',
 } as const;
 
 /** Returns classes that are defined globally (focus and active styles) based on options */

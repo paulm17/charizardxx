@@ -3,7 +3,7 @@ import { readLocalStorageValue, useLocalStorage } from './use-local-storage';
 
 export default { title: 'use-local-storage' };
 
-const key = 'charizardxx-use-local-storage-1';
+const key = 'mantine-use-local-storage-1';
 
 export function Usage() {
   const [id, set] = useLocalStorage({

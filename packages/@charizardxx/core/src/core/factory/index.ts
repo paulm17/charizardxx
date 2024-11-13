@@ -4,8 +4,8 @@ export { createPolymorphicComponent } from './create-polymorphic-component';
 export type {
   FactoryPayload,
   ExtendComponent,
-  CharizardxxComponent,
-  CharizardxxComponentStaticProperties,
+  MantineComponent,
+  MantineComponentStaticProperties,
   FactoryComponentWithProps,
 } from './factory';
 export type { PolymorphicComponentProps, PolymorphicRef } from './create-polymorphic-component';

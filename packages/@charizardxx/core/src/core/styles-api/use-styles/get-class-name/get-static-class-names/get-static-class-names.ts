@@ -5,7 +5,7 @@ interface GetStaticClassNamesInput {
   withStaticClass?: boolean;
 }
 
-/** Returns static component classes, for example, `.charizardxx-Input-wrapper` */
+/** Returns static component classes, for example, `.mantine-Input-wrapper` */
 export function getStaticClassNames({
   themeName,
   classNamesPrefix,

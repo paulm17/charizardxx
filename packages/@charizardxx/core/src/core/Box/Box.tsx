@@ -1,15 +1,15 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import cx from 'clsx';
-import { CharizardxxBreakpoint, useCharizardxxTheme } from '../CharizardxxProvider';
 import { createPolymorphicComponent } from '../factory';
 import { InlineStyles } from '../InlineStyles';
+import { MantineBreakpoint, useMantineSxTransform, useMantineTheme } from '../MantineProvider';
 import { isNumberLike } from '../utils';
-import type { CharizardxxStyleProp, CssVarsProp } from './Box.types';
+import type { CssVarsProp, MantineStyleProp } from './Box.types';
 import { getBoxMod } from './get-box-mod/get-box-mod';
 import { getBoxStyle } from './get-box-style/get-box-style';
 import {
-  CharizardxxStyleProps,
   extractStyleProps,
+  MantineStyleProps,
   parseStyleProps,
   STYlE_PROPS_DATA,
 } from './style-props';
@@ -18,12 +18,12 @@ import { useRandomClassName } from './use-random-classname/use-random-classname'
 export type Mod = Record<string, any> | string;
 export type BoxMod = Mod | Mod[] | BoxMod[];
 
-export interface BoxProps extends CharizardxxStyleProps {
-  /** Class added to root element, if applicable */
+export interface BoxProps extends MantineStyleProps {
+  /** Class added to the root element, if applicable */
   className?: string;
 
-  /** Inline style added to root component element, can subscribe to theme defined on CharizardxxProvider */
-  style?: CharizardxxStyleProp;
+  /** Inline style added to root component element, can subscribe to theme defined on MantineProvider */
+  style?: MantineStyleProp;
 
   /** CSS variables defined on root component element */
   __vars?: CssVarsProp;
@@ -32,10 +32,10 @@ export interface BoxProps extends CharizardxxStyleProps {
   __size?: string;
 
   /** Breakpoint above which the component is hidden with `display: none` */
-  hiddenFrom?: CharizardxxBreakpoint;
+  hiddenFrom?: MantineBreakpoint;
 
   /** Breakpoint below which the component is hidden with `display: none` */
-  visibleFrom?: CharizardxxBreakpoint;
+  visibleFrom?: MantineBreakpoint;
 
   /** Determines whether component should be hidden in light color scheme with `display: none` */
   lightHidden?: boolean;
@@ -83,10 +83,11 @@ const _Box = forwardRef<
     },
     ref
   ) => {
-    const theme = useCharizardxxTheme();
+    const theme = useMantineTheme();
     const Element = component || 'div';
-
     const { styleProps, rest } = extractStyleProps(others);
+    const useSxTransform = useMantineSxTransform();
+    const transformedSx = useSxTransform?.()?.(styleProps.sx);
     const responsiveClassName = useRandomClassName();
     const parsedStyleProps = parseStyleProps({
       styleProps,
@@ -102,12 +103,12 @@ const _Box = forwardRef<
         vars: __vars,
         styleProps: parsedStyleProps.inlineStyles,
       }),
-      className: cx(className, {
+      className: cx(className, transformedSx, {
         [responsiveClassName]: parsedStyleProps.hasResponsiveStyles,
-        'charizardxx-light-hidden': lightHidden,
-        'charizardxx-dark-hidden': darkHidden,
-        [`charizardxx-hidden-from-${hiddenFrom}`]: hiddenFrom,
-        [`charizardxx-visible-from-${visibleFrom}`]: visibleFrom,
+        'mantine-light-hidden': lightHidden,
+        'mantine-dark-hidden': darkHidden,
+        [`mantine-hidden-from-${hiddenFrom}`]: hiddenFrom,
+        [`mantine-visible-from-${visibleFrom}`]: visibleFrom,
       }),
       'data-variant': variant,
       'data-size': isNumberLike(size) ? undefined : size || undefined,
@@ -125,6 +126,7 @@ const _Box = forwardRef<
             media={parsedStyleProps.media}
           />
         )}
+
         {typeof renderRoot === 'function' ? renderRoot(props) : <Element {...props} />}
       </>
     );

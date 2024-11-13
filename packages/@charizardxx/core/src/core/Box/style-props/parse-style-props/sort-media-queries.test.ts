@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../MantineProvider';
 import { sortMediaQueries } from './sort-media-queries';
 
 describe('@charizardxx/core/Box/sort-media-queries', () => {
@@ -11,7 +11,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
           padding: '1.5vh',
           marginLeft: '2vh',
           marginRight: '2vh',
-          color: 'var(--charizardxx-color-red-5)',
+          color: 'var(--mantine-color-red-5)',
           opacity: 0.65,
         },
         media: {
@@ -19,7 +19,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '3vh',
             marginLeft: '6vh',
             marginRight: '6vh',
-            color: 'var(--charizardxx-color-red-7)',
+            color: 'var(--mantine-color-red-7)',
             opacity: 0.95,
           },
 
@@ -27,7 +27,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '4vh',
             marginLeft: '8vh',
             marginRight: '8vh',
-            color: 'var(--charizardxx-color-red-9)',
+            color: 'var(--mantine-color-red-9)',
             opacity: 0.95,
           },
 
@@ -35,7 +35,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '2vh',
             marginLeft: '4vh',
             marginRight: '4vh',
-            color: 'var(--charizardxx-color-red-6)',
+            color: 'var(--mantine-color-red-6)',
             opacity: 0.85,
           },
         },
@@ -47,7 +47,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
         padding: '1.5vh',
         marginLeft: '2vh',
         marginRight: '2vh',
-        color: 'var(--charizardxx-color-red-5)',
+        color: 'var(--mantine-color-red-5)',
         opacity: 0.65,
       },
       media: [
@@ -57,7 +57,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '2vh',
             marginLeft: '4vh',
             marginRight: '4vh',
-            color: 'var(--charizardxx-color-red-6)',
+            color: 'var(--mantine-color-red-6)',
             opacity: 0.85,
           },
         },
@@ -67,7 +67,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '3vh',
             marginLeft: '6vh',
             marginRight: '6vh',
-            color: 'var(--charizardxx-color-red-7)',
+            color: 'var(--mantine-color-red-7)',
             opacity: 0.95,
           },
         },
@@ -77,7 +77,7 @@ describe('@charizardxx/core/Box/sort-media-queries', () => {
             padding: '4vh',
             marginLeft: '8vh',
             marginRight: '8vh',
-            color: 'var(--charizardxx-color-red-9)',
+            color: 'var(--mantine-color-red-9)',
             opacity: 0.95,
           },
         },

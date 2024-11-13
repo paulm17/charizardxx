@@ -1,6 +1,7 @@
 import { css } from '@pigment-css/react';
 import { rem } from '../../core';
 
+// @ts-ignore
 export const BadgeRootStyle = css(({ theme }) => ({
   '--badge-height-xs': '16px',
   '--badge-height-sm': '18px',
@@ -25,8 +26,8 @@ export const BadgeRootStyle = css(({ theme }) => ({
   '--badge-padding-x': 'var(--badge-padding-x-md)',
   '--badge-radius': '1000px',
   '--badge-lh': `calc(var(--badge-height) - ${rem('2px')})`,
-  '--badge-color': 'var(--charizardxx-color-white)',
-  '--badge-bg': 'var(--charizardxx-primary-color-filled)',
+  '--badge-color': 'var(--mantine-color-white)',
+  '--badge-bg': 'var(--mantine-primary-color-filled)',
   '--badge-border-width': '1px',
   '--badge-bd': 'var(--badge-border-width) solid transparent',
 
@@ -112,7 +113,7 @@ export const BadgeLabelStyle = css({
 
 export const BadgeSectionStyle = css({
   // @ts-ignore
-  '--badge-section-margin': 'calc(var(--charizardxx-spacing-xs) / 2)',
+  '--badge-section-margin': 'calc(var(--mantine-spacing-xs) / 2)',
 
   display: 'inline-flex',
   justifyContent: 'center',

@@ -1,12 +1,12 @@
 import type { StylePropType } from './resolvers';
-import type { CharizardxxStyleProps } from './style-props.types';
+import type { MantineStyleProps } from './style-props.types';
 
 export interface SystemPropData {
   type: StylePropType;
   property: string | string[];
 }
 
-export const STYlE_PROPS_DATA: Record<keyof CharizardxxStyleProps, SystemPropData> = {
+export const STYlE_PROPS_DATA: Record<keyof MantineStyleProps, SystemPropData> = {
   m: { type: 'spacing', property: 'margin' },
   mt: { type: 'spacing', property: 'marginTop' },
   mb: { type: 'spacing', property: 'marginBottom' },

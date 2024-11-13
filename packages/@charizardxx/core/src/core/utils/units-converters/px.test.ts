@@ -32,8 +32,8 @@ describe('@charizardxx/core/units-converters/px', () => {
   });
 
   it('converts scaled rem values', () => {
-    expect(px('calc(1rem * var(--charizardxx-scale))')).toBe(16);
-    expect(px('calc(1.25rem * var(--charizardxx-scale))')).toBe(20);
+    expect(px('calc(1rem * var(--mantine-scale))')).toBe(16);
+    expect(px('calc(1.25rem * var(--mantine-scale))')).toBe(20);
     expect(px('calc(10rem + 1vh)')).toBe('calc(10rem + 1vh)');
   });
 });

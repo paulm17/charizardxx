@@ -54,7 +54,7 @@ export function WithFixedWidth() {
 export function WithIconInSection() {
   return (
     <Badge
-      leftSection={<IconStarFilled size={12} color="var(--charizardxx-color-yellow-5)" />}
+      leftSection={<IconStarFilled size={12} color="var(--mantine-color-yellow-5)" />}
       color="dark"
       variant="filled"
     >
@@ -138,7 +138,7 @@ export function Unstyled() {
 export function CustomComponent() {
   return (
     <div style={{ padding: 40 }}>
-      <Badge component="a" href="https://charizardxx.dev/">
+      <Badge component="a" href="https://mantine.dev/">
         Anchor
       </Badge>
 

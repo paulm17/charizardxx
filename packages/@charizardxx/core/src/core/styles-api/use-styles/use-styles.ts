@@ -1,7 +1,12 @@
 import { CSSProperties } from 'react';
-import type { CharizardxxStyleProp } from '../../Box';
-import { useCharizardxxTheme } from '../../CharizardxxProvider';
+import type { MantineStyleProp } from '../../Box';
 import { FactoryPayload } from '../../factory';
+import {
+  useMantineClassNamesPrefix,
+  useMantineIsHeadless,
+  useMantineTheme,
+  useMantineWithStaticClasses,
+} from '../../MantineProvider';
 import { PartialVarsResolver, VarsResolver } from '../create-vars-resolver/create-vars-resolver';
 import { ClassNames, ClassNamesArray, GetStylesApiOptions, Styles } from '../styles-api.types';
 import { getClassName } from './get-class-name/get-class-name';
@@ -14,7 +19,7 @@ export interface UseStylesInput<Payload extends FactoryPayload> {
   props: Payload['props'];
   stylesCtx?: Payload['ctx'];
   className?: string;
-  style?: CharizardxxStyleProp;
+  style?: MantineStyleProp;
   rootSelector?: Payload['stylesNames'];
   unstyled?: boolean;
   classNames?: ClassNames<Payload> | ClassNamesArray<Payload>;
@@ -45,10 +50,11 @@ export function useStyles<Payload extends FactoryPayload>({
   vars,
   varsResolver,
 }: UseStylesInput<Payload>): GetStylesApi<Payload> {
-  const theme = useCharizardxxTheme();
-  const classNamesPrefix = 'charizardxx';
+  const theme = useMantineTheme();
+  const classNamesPrefix = useMantineClassNamesPrefix();
+  const withStaticClasses = useMantineWithStaticClasses();
+  const headless = useMantineIsHeadless();
   const themeName = (Array.isArray(name) ? name : [name]).filter((n) => n) as string[];
-
   const { withStylesTransform, getTransformedStyles } = useStylesTransform({
     props,
     stylesCtx,
@@ -69,6 +75,8 @@ export function useStyles<Payload extends FactoryPayload>({
       rootSelector,
       props,
       stylesCtx,
+      withStaticClasses,
+      headless,
       transformedStyles: getTransformedStyles([options?.styles, styles]),
     }),
 
@@ -80,10 +88,11 @@ export function useStyles<Payload extends FactoryPayload>({
       props,
       stylesCtx,
       rootSelector,
-      styles: {},
+      styles,
       style,
       vars,
       varsResolver,
+      headless,
       withStylesTransform,
     }),
   });

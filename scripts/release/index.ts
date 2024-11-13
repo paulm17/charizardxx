@@ -6,12 +6,12 @@ import { hideBin } from 'yargs/helpers';
 import yargs from 'yargs/yargs';
 import packageJson from '../../package.json';
 import { buildAllPackages } from '../build/build-all-packages';
-import { getCharizardxxPackagesList } from '../packages/get-packages-list';
+import { getMantinePackagesList } from '../packages/get-packages-list';
 import { publishPackage } from '../publish/publish-package';
 import { getPath } from '../utils/get-path';
 import { createLogger } from '../utils/signale';
 import { openGithubRelease } from './open-github-release';
-import { setCharizardxxPackagesVersion } from './set-charizardxx-packages-version';
+import { setMantinePackagesVersion } from './set-mantine-packages-version';
 
 const logger = createLogger('release');
 const git = simpleGit();
@@ -44,7 +44,7 @@ async function release() {
   });
 
   logger.log(`New version: ${chalk.cyan(incrementedVersion)}`);
-  await setCharizardxxPackagesVersion(incrementedVersion);
+  await setMantinePackagesVersion(incrementedVersion);
 
   await buildAllPackages();
   logger.success('All packages have been built successfully');
@@ -55,10 +55,10 @@ async function release() {
     argv.tag = 'next';
   }
 
-  const charizardxxPackages = await getCharizardxxPackagesList();
+  const mantinePackages = await getMantinePackagesList();
 
   await Promise.all(
-    charizardxxPackages.map((p) =>
+    mantinePackages.map((p) =>
       publishPackage({ packagePath: p!.path, name: p!.packageJson.name!, tag: argv.tag })
     )
   );

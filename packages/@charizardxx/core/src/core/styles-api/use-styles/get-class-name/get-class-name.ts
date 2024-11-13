@@ -1,5 +1,5 @@
 import cx from 'clsx';
-import { CharizardxxTheme } from '../../../CharizardxxProvider';
+import { MantineTheme } from '../../../MantineProvider';
 import { GetStylesApiOptions } from '../../styles-api.types';
 import { getGlobalClassNames } from './get-global-class-names/get-global-class-names';
 import { getOptionsClassNames } from './get-options-class-names/get-options-class-names';
@@ -14,7 +14,7 @@ type __ClassNames =
   | undefined
   | Partial<Record<string, string>>
   | ((
-      theme: CharizardxxTheme,
+      theme: MantineTheme,
       props: Record<string, any>,
       ctx: Record<string, any> | undefined
     ) => Partial<Record<string, string>>);
@@ -23,7 +23,7 @@ export type _ClassNames = __ClassNames | __ClassNames[];
 
 export interface GetClassNameOptions {
   /** Theme object, resolved by hook */
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
 
   /** Options for specified selector, may include `classNames` or `className` */
   options: GetStylesApiOptions | undefined;
@@ -34,7 +34,7 @@ export interface GetClassNameOptions {
   /** Class part specified in `getStyles` */
   selector: string;
 
-  /** Prefix for all class names, resolved by hook, `charizardxx` by default */
+  /** Prefix for all class names, resolved by hook, `mantine` by default */
   classNamesPrefix: string;
 
   /** `classNames` specified in the hook, only resolved `classNames[selector]` is added to the list */
@@ -61,6 +61,9 @@ export interface GetClassNameOptions {
   /** Determines whether static classes should be added */
   withStaticClasses?: boolean;
 
+  /** If set, removes all Mantine classes */
+  headless?: boolean;
+
   /** `styles` prop transformed into classes with CSS-in-JS library, for example, emotion */
   transformedStyles?: Record<string, string>[];
 }
@@ -78,18 +81,27 @@ export function getClassName({
   rootSelector,
   props,
   stylesCtx,
+  withStaticClasses,
+  headless,
   transformedStyles,
 }: GetClassNameOptions) {
   return cx(
-    getGlobalClassNames({ theme, options, unstyled }),
+    getGlobalClassNames({ theme, options, unstyled: unstyled || headless }),
     getThemeClassNames({ theme, themeName, selector, props, stylesCtx }),
     getVariantClassName({ options, classes, selector, unstyled }),
     getResolvedClassNames({ selector, stylesCtx, theme, classNames, props }),
     getResolvedClassNames({ selector, stylesCtx, theme, classNames: transformedStyles, props }),
     getOptionsClassNames({ selector, stylesCtx, options, props, theme }),
     getRootClassName({ rootSelector, selector, className }),
-    getSelectorClassName({ selector, classes, unstyled }),
-    getStaticClassNames({ themeName, classNamesPrefix, selector }),
+    getSelectorClassName({ selector, classes, unstyled: unstyled || headless }),
+    withStaticClasses &&
+      !headless &&
+      getStaticClassNames({
+        themeName,
+        classNamesPrefix,
+        selector,
+        withStaticClass: options?.withStaticClass,
+      }),
     options?.className
   );
 }

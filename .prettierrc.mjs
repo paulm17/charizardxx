@@ -14,6 +14,7 @@ const config = {
     '<BUILTIN_MODULES>',
     '<THIRD_PARTY_MODULES>',
     '^@charizardxx/(.*)$',
+    '^@charizardxxx/(.*)$',
     '^@charizardxx-tests/(.*)$',
     '^@docs/(.*)$',
     '^@/.*$',

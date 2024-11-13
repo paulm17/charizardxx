@@ -14,5 +14,9 @@ export function getPackageName(input: string) {
     return `@charizardxx-tests/${input.replace('tests-', '')}`;
   }
 
+  if (input.startsWith('x-')) {
+    return `@charizardxxx/${input.replace('x-', '')}`;
+  }
+
   return `@charizardxx/${input}`;
 }

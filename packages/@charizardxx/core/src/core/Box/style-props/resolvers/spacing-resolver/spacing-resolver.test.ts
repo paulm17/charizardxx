@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { rem } from '../../../../utils';
 import { spacingResolver } from './spacing-resolver';
 
@@ -11,8 +11,8 @@ describe('@charizardxx/core/Box/spacing-resolver', () => {
   });
 
   it('resolves theme value correctly', () => {
-    expect(spacingResolver('xs', DEFAULT_THEME)).toBe('var(--charizardxx-spacing-xs)');
-    expect(spacingResolver('-md', DEFAULT_THEME)).toBe('calc(var(--charizardxx-spacing-md) * -1)');
+    expect(spacingResolver('xs', DEFAULT_THEME)).toBe('var(--mantine-spacing-xs)');
+    expect(spacingResolver('-md', DEFAULT_THEME)).toBe('calc(var(--mantine-spacing-md) * -1)');
   });
 
   it('resolves string correctly', () => {

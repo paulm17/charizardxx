@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { FOCUS_CLASS_NAMES, getGlobalClassNames } from './get-global-class-names';
 
 describe('@charizardxx/core/get-global-class-names', () => {

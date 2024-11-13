@@ -1,4 +1,3 @@
-import { vi } from 'vitest';
 import { noop } from '../noop/noop';
 import { closeOnEscape } from './close-on-escape';
 
@@ -6,19 +5,19 @@ const mockEvent: any = { key: 'Escape', code: 'Escape' };
 
 describe('@charizardxx/core/close-on-escape', () => {
   it('calls given callback function', () => {
-    const spy = vi.fn();
+    const spy = jest.fn();
     closeOnEscape(spy)(mockEvent);
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
   it('does not call callback if options.active is false', () => {
-    const spy = vi.fn();
+    const spy = jest.fn();
     closeOnEscape(spy, { active: false })(mockEvent);
     expect(spy).toHaveBeenCalledTimes(0);
   });
 
   it('does not call callback if button that is pressed is not escape', () => {
-    const spy = vi.fn();
+    const spy = jest.fn();
     closeOnEscape(spy, { active: false })({ key: 'ArrowRight', code: 'ArrowRight' } as any);
     expect(spy).toHaveBeenCalledTimes(0);
   });
@@ -29,7 +28,7 @@ describe('@charizardxx/core/close-on-escape', () => {
   });
 
   it('calls given trigger when callback triggers', () => {
-    const spy = vi.fn();
+    const spy = jest.fn();
     closeOnEscape(noop, { active: true, onTrigger: spy })(mockEvent);
     expect(spy).toHaveBeenCalledTimes(1);
 

@@ -30,7 +30,6 @@ export function getPackagesList() {
 
   for (const srcPath of srcPaths) {
     const packageJsonPath = path.join(basePath, srcPath, 'package.json');
-
     if (fs.pathExistsSync(packageJsonPath)) {
       packages.push({
         path: path.join(basePath, srcPath),
@@ -43,7 +42,7 @@ export function getPackagesList() {
   return packages;
 }
 
-export function getCharizardxxPackagesList() {
+export function getMantinePackagesList() {
   const packages = getPackagesList();
   return packages.filter((pkg) => pkg.packageJson.name?.startsWith('@charizardxx/'));
 }

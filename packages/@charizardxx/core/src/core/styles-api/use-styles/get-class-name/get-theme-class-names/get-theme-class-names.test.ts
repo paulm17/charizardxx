@@ -1,7 +1,7 @@
-import { CharizardxxTheme, DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME, MantineTheme } from '../../../../MantineProvider';
 import { getThemeClassNames } from './get-theme-class-names';
 
-const testTheme: CharizardxxTheme = {
+const testTheme: MantineTheme = {
   ...DEFAULT_THEME,
   components: {
     TestComponentObject: {

@@ -1,5 +1,5 @@
 function getTransformedScaledValue(value: unknown) {
-  if (typeof value !== 'string' || !value.includes('var(--charizardxx-scale)')) {
+  if (typeof value !== 'string' || !value.includes('var(--mantine-scale)')) {
     return value;
   }
 

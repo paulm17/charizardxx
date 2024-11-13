@@ -1,30 +1,29 @@
 import { act, renderHook } from '@testing-library/react';
-import { vi } from 'vitest';
 import { useTimeout } from './use-timeout';
 
 const defaultTimeout = 2000;
 
-const callback = vi.fn();
+const callback = jest.fn();
 
 const setupTimer = (timeout: number = defaultTimeout) => ({
   timeout,
-  advanceTimerToNextTick: () => vi.advanceTimersByTime(timeout),
+  advanceTimerToNextTick: () => jest.advanceTimersByTime(timeout),
 });
 
 describe('@charizardxx/hooks/use-timeout', () => {
   beforeAll(() => {
-    vi.useFakeTimers();
-    vi.spyOn(global, 'setTimeout');
-    vi.spyOn(global, 'clearTimeout');
+    jest.useFakeTimers();
+    jest.spyOn(global, 'setTimeout');
+    jest.spyOn(global, 'clearTimeout');
   });
 
   afterEach(() => {
-    vi.clearAllMocks();
-    vi.clearAllTimers();
+    jest.clearAllMocks();
+    jest.clearAllTimers();
   });
 
   afterAll(() => {
-    vi.useRealTimers();
+    jest.useRealTimers();
   });
 
   it('initialize', () => {

@@ -1,66 +1,64 @@
 import type {
-  CharizardxxBreakpoint,
-  CharizardxxColor,
-  CharizardxxFontSize,
-  CharizardxxLineHeight,
-  CharizardxxSpacing,
-} from '../../CharizardxxProvider';
+  MantineBreakpoint,
+  MantineColor,
+  MantineFontSize,
+  MantineLineHeight,
+  MantineSpacing,
+} from '../../MantineProvider';
 
-export type StyleProp<Value> =
-  | Value
-  | Partial<Record<CharizardxxBreakpoint | (string & {}), Value>>;
+export type StyleProp<Value> = Value | Partial<Record<MantineBreakpoint | (string & {}), Value>>;
 
-export interface CharizardxxStyleProps {
+export interface MantineStyleProps {
   /** Margin, theme key: theme.spacing */
-  m?: StyleProp<CharizardxxSpacing>;
+  m?: StyleProp<MantineSpacing>;
   /** MarginBlock, theme key: theme.spacing */
-  my?: StyleProp<CharizardxxSpacing>;
+  my?: StyleProp<MantineSpacing>;
   /** MarginInline, theme key: theme.spacing */
-  mx?: StyleProp<CharizardxxSpacing>;
+  mx?: StyleProp<MantineSpacing>;
   /** MarginTop, theme key: theme.spacing */
-  mt?: StyleProp<CharizardxxSpacing>;
+  mt?: StyleProp<MantineSpacing>;
   /** MarginBottom, theme key: theme.spacing */
-  mb?: StyleProp<CharizardxxSpacing>;
+  mb?: StyleProp<MantineSpacing>;
   /** MarginInlineStart, theme key: theme.spacing */
-  ms?: StyleProp<CharizardxxSpacing>;
+  ms?: StyleProp<MantineSpacing>;
   /** MarginInlineEnd, theme key: theme.spacing */
-  me?: StyleProp<CharizardxxSpacing>;
+  me?: StyleProp<MantineSpacing>;
   /** MarginLeft, theme key: theme.spacing */
-  ml?: StyleProp<CharizardxxSpacing>;
+  ml?: StyleProp<MantineSpacing>;
   /** MarginRight, theme key: theme.spacing */
-  mr?: StyleProp<CharizardxxSpacing>;
+  mr?: StyleProp<MantineSpacing>;
   /** Padding, theme key: theme.spacing */
 
-  p?: StyleProp<CharizardxxSpacing>;
+  p?: StyleProp<MantineSpacing>;
   /** PaddingBlock, theme key: theme.spacing */
-  py?: StyleProp<CharizardxxSpacing>;
+  py?: StyleProp<MantineSpacing>;
   /** PaddingInline, theme key: theme.spacing */
-  px?: StyleProp<CharizardxxSpacing>;
+  px?: StyleProp<MantineSpacing>;
   /** PaddingTop, theme key: theme.spacing */
-  pt?: StyleProp<CharizardxxSpacing>;
+  pt?: StyleProp<MantineSpacing>;
   /** PaddingBottom, theme key: theme.spacing */
-  pb?: StyleProp<CharizardxxSpacing>;
+  pb?: StyleProp<MantineSpacing>;
   /** PaddingInlineStart, theme key: theme.spacing */
-  ps?: StyleProp<CharizardxxSpacing>;
+  ps?: StyleProp<MantineSpacing>;
   /** PaddingInlineEnd, theme key: theme.spacing */
-  pe?: StyleProp<CharizardxxSpacing>;
+  pe?: StyleProp<MantineSpacing>;
   /** PaddingLeft, theme key: theme.spacing */
-  pl?: StyleProp<CharizardxxSpacing>;
+  pl?: StyleProp<MantineSpacing>;
   /** PaddingRight, theme key: theme.spacing */
-  pr?: StyleProp<CharizardxxSpacing>;
+  pr?: StyleProp<MantineSpacing>;
 
   /** Border */
   bd?: StyleProp<React.CSSProperties['border']>;
   /** Background, theme key: theme.colors */
-  bg?: StyleProp<CharizardxxColor>;
+  bg?: StyleProp<MantineColor>;
   /** Color */
-  c?: StyleProp<CharizardxxColor>;
+  c?: StyleProp<MantineColor>;
   opacity?: StyleProp<React.CSSProperties['opacity']>;
 
   /** FontFamily */
   ff?: StyleProp<'monospace' | 'text' | 'heading' | (string & {})>;
   /** FontSize, theme key: theme.fontSizes */
-  fz?: StyleProp<CharizardxxFontSize | `h${1 | 2 | 3 | 4 | 5 | 6}` | number | (string & {})>;
+  fz?: StyleProp<MantineFontSize | `h${1 | 2 | 3 | 4 | 5 | 6}` | number | (string & {})>;
   /** FontWeight */
   fw?: StyleProp<React.CSSProperties['fontWeight']>;
   /** LetterSpacing */
@@ -68,7 +66,7 @@ export interface CharizardxxStyleProps {
   /** TextAlign */
   ta?: StyleProp<React.CSSProperties['textAlign']>;
   /** LineHeight, theme key: lineHeights */
-  lh?: StyleProp<CharizardxxLineHeight | `h${1 | 2 | 3 | 4 | 5 | 6}` | number | (string & {})>;
+  lh?: StyleProp<MantineLineHeight | `h${1 | 2 | 3 | 4 | 5 | 6}` | number | (string & {})>;
   /** FontStyle */
   fs?: StyleProp<React.CSSProperties['fontStyle']>;
   /** TextTransform */

@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import type { CharizardxxThemeComponent } from '../CharizardxxProvider';
+import type { MantineThemeComponent } from '../MantineProvider';
 import type { ClassNames, PartialVarsResolver, Styles } from '../styles-api';
 
 export type DataAttributes = Record<`data-${string}`, any>;
@@ -12,7 +12,7 @@ export interface FactoryPayload {
   vars?: any;
   variant?: string;
   staticComponents?: Record<string, any>;
-  // Compound components cannot have classNames, styles and vars on CharizardxxProvider
+  // Compound components cannot have classNames, styles and vars on MantineProvider
   compound?: boolean;
 }
 
@@ -35,14 +35,14 @@ export type StaticComponents<Input> =
   Input extends Record<string, any> ? Input : Record<string, never>;
 
 export interface ThemeExtend<Payload extends FactoryPayload> {
-  extend: (input: ExtendComponent<Payload>) => CharizardxxThemeComponent;
+  extend: (input: ExtendComponent<Payload>) => MantineThemeComponent;
 }
 
 export type ComponentClasses<Payload extends FactoryPayload> = {
   classes: Payload['stylesNames'] extends string ? Record<string, string> : never;
 };
 
-export type CharizardxxComponentStaticProperties<Payload extends FactoryPayload> =
+export type MantineComponentStaticProperties<Payload extends FactoryPayload> =
   ThemeExtend<Payload> &
     ComponentClasses<Payload> &
     StaticComponents<Payload['staticComponents']> &
@@ -58,14 +58,14 @@ export type FactoryComponentWithProps<Payload extends FactoryPayload> = {
   >;
 };
 
-export type CharizardxxComponent<Payload extends FactoryPayload> = React.ForwardRefExoticComponent<
+export type MantineComponent<Payload extends FactoryPayload> = React.ForwardRefExoticComponent<
   Payload['props'] &
     React.RefAttributes<Payload['ref']> & {
       component?: any;
       renderRoot?: (props: Record<string, any>) => React.ReactNode;
     }
 > &
-  CharizardxxComponentStaticProperties<Payload>;
+  MantineComponentStaticProperties<Payload>;
 
 export function identity<T>(value: T): T {
   return value;
@@ -98,5 +98,5 @@ export function factory<Payload extends FactoryPayload>(
     return Extended;
   };
 
-  return Component as CharizardxxComponent<Payload>;
+  return Component as MantineComponent<Payload>;
 }

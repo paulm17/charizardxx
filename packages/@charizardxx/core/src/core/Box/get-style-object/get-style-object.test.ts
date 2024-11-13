@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../MantineProvider';
 import { getStyleObject } from './get-style-object';
 
 describe('@charizardxx/core/Box/get-style-object', () => {
@@ -7,9 +7,7 @@ describe('@charizardxx/core/Box/get-style-object', () => {
   });
 
   it('returns style object if style is object', () => {
-    expect(getStyleObject({ color: 'red' }, DEFAULT_THEME)).toStrictEqual({
-      color: 'red',
-    });
+    expect(getStyleObject({ color: 'red' }, DEFAULT_THEME)).toStrictEqual({ color: 'red' });
   });
 
   it('returns style object if style is function', () => {

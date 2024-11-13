@@ -1,7 +1,7 @@
-import { CharizardxxTheme, DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME, MantineTheme } from '../../../../MantineProvider';
 import { resolveVars } from './resolve-vars';
 
-const themeWithVars: CharizardxxTheme = {
+const themeWithVars: MantineTheme = {
   ...DEFAULT_THEME,
   components: {
     Test: {

@@ -1,9 +1,9 @@
 import cx from 'clsx';
-import { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import { MantineTheme } from '../../../../MantineProvider';
 import type { _ClassNames } from '../get-class-name';
 
 export interface ResolveClassNamesInput {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   classNames: _ClassNames;
   props: Record<string, any>;
   stylesCtx: Record<string, any> | undefined;

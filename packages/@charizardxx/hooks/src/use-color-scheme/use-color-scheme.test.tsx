@@ -1,19 +1,18 @@
 import { render } from '@testing-library/react';
-import { vi } from 'vitest';
 import { useColorScheme } from './use-color-scheme';
 
 describe('@charizardxx/hooks/use-color-scheme', () => {
-  let trace = vi.fn<(colorScheme: string) => void, string[]>();
-  const mockMatchMedia = vi.fn().mockImplementation(() => ({
+  let trace = jest.fn<(colorScheme: string) => void, string[]>();
+  const mockMatchMedia = jest.fn().mockImplementation(() => ({
     matches: true,
     media: '',
     onchange: null,
-    addListener: vi.fn(),
-    removeListener: vi.fn(),
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
   }));
   const retainMatchMedia = window.matchMedia;
   beforeEach(() => {
-    trace = vi.fn();
+    trace = jest.fn();
     window.matchMedia = retainMatchMedia;
   });
   function WrapperComponent({

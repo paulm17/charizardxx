@@ -4,8 +4,8 @@ import open from 'open';
 export function openGithubRelease(version: string) {
   open(
     githubRelease({
-      user: 'paulm17',
-      repo: 'charizardxx',
+      user: 'mantinedev',
+      repo: 'mantine',
       tag: version,
       title: version,
     })

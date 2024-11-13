@@ -1,8 +1,8 @@
-import { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import { MantineTheme } from '../../../../MantineProvider';
 import { rem } from '../../../../utils';
 import { colorResolver } from '../color-resolver/color-resolver';
 
-export function borderResolver(value: unknown, theme: CharizardxxTheme) {
+export function borderResolver(value: unknown, theme: MantineTheme) {
   if (typeof value === 'number') {
     return rem(value);
   }

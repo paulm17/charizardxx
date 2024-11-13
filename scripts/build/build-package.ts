@@ -26,12 +26,6 @@ export async function buildPackage(_packageName: string) {
   try {
     const startTime = Date.now();
 
-    // Remove cjs, esm, lib and build.tsbuildinfo
-    const removeDirs = ['cjs', 'esm', 'lib', 'tsconfig.build.tsbuildinfo'];
-    for (const item of removeDirs) {
-      await fs.remove(path.join(packagePath, item));
-    }
-
     logger.log(`Generating ${formattedPackageName} *.d.ts files...`);
     await generateDts(packagePath);
 

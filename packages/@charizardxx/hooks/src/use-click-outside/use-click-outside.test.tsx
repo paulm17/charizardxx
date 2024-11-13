@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { vi } from 'vitest';
 import { useClickOutside } from './use-click-outside';
 
 interface UseClickOutsideProps {
@@ -17,11 +16,11 @@ const Target: React.FunctionComponent<UseClickOutsideProps> = ({ handler, events
 
 describe('@charizardxx/hooks/use-click-outside', () => {
   afterAll(() => {
-    vi.clearAllMocks();
+    jest.clearAllMocks();
   });
 
   it('calls `handler` function when clicked outside target (no `events` given)', async () => {
-    const handler = vi.fn();
+    const handler = jest.fn();
 
     render(
       <>
@@ -49,7 +48,7 @@ describe('@charizardxx/hooks/use-click-outside', () => {
   });
 
   it('calls `handler` only on given `events`', async () => {
-    const handler = vi.fn();
+    const handler = jest.fn();
     const events = ['keydown'];
 
     render(
@@ -72,7 +71,7 @@ describe('@charizardxx/hooks/use-click-outside', () => {
   });
 
   it('ignores clicks outside the given `nodes`', async () => {
-    const handler = vi.fn();
+    const handler = jest.fn();
 
     const Wrapper: React.FunctionComponent = () => {
       const [ignore, setIgnore] = useState<HTMLDivElement | null>(null);

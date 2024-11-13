@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react';
-import { vi } from 'vitest';
 import { useOs } from './use-os';
 
 const platforms = {
@@ -19,12 +18,12 @@ const platforms = {
 
 describe('@charizardxx/hooks/use-os', () => {
   afterEach(() => {
-    vi.clearAllMocks();
+    jest.clearAllMocks();
   });
 
   Object.entries(platforms).forEach(([os, userAgents]) => {
     it.each(userAgents)(`should detect %s platform on ${os}`, (userAgent) => {
-      vi.spyOn(window.navigator, 'userAgent', 'get').mockReturnValueOnce(userAgent);
+      jest.spyOn(window.navigator, 'userAgent', 'get').mockReturnValueOnce(userAgent);
 
       const { result } = renderHook(() => useOs());
 

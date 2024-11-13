@@ -27,10 +27,10 @@ describe('@charizardxx/core/Badge', () => {
 
   it('sets data-block attribute on root element if fullWidth prop is set', () => {
     const { rerender, container } = render(<Badge {...defaultProps} fullWidth />);
-    expect(container.querySelector('.charizardxx-Badge-root')).toHaveAttribute('data-block');
+    expect(container.querySelector('.mantine-Badge-root')).toHaveAttribute('data-block');
 
     rerender(<Badge {...defaultProps} fullWidth={false} />);
-    expect(container.querySelector('.charizardxx-Badge-root')).not.toHaveAttribute('data-block');
+    expect(container.querySelector('.mantine-Badge-root')).not.toHaveAttribute('data-block');
   });
 
   it('renders given left and right sections', () => {
@@ -39,10 +39,10 @@ describe('@charizardxx/core/Badge', () => {
     );
 
     expect(
-      container.querySelector('.charizardxx-Badge-section[data-position="left"]')
+      container.querySelector('.mantine-Badge-section[data-position="left"]')
     ).toHaveTextContent('test-left');
     expect(
-      container.querySelector('.charizardxx-Badge-section[data-position="right"]')
+      container.querySelector('.mantine-Badge-section[data-position="right"]')
     ).toHaveTextContent('test-right');
   });
 });

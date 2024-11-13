@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { getOptionsClassNames } from './get-options-class-names';
 
 const testObjectClassNames = {

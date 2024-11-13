@@ -1,11 +1,11 @@
-import type { CharizardxxStyleProp, CSSProperties } from '../Box';
-import type { CharizardxxTheme } from '../CharizardxxProvider';
+import type { CSSProperties, MantineStyleProp } from '../Box';
 import type { FactoryPayload } from '../factory';
+import type { MantineTheme } from '../MantineProvider';
 import { PartialVarsResolver } from './create-vars-resolver/create-vars-resolver';
 
 export interface GetStylesApiOptions {
   className?: string;
-  style?: CharizardxxStyleProp;
+  style?: MantineStyleProp;
   focusable?: boolean;
   active?: boolean;
   classNames?: ClassNames<{ props: any; stylesNames: string }>;
@@ -26,7 +26,7 @@ export type StylesApiRecord<
     ?
         | StylesRecord<Payload['stylesNames'], DataType>
         | ((
-            theme: CharizardxxTheme,
+            theme: MantineTheme,
             props: Payload['props'],
             ctx: Payload['ctx']
           ) => StylesRecord<Payload['stylesNames'], DataType>)

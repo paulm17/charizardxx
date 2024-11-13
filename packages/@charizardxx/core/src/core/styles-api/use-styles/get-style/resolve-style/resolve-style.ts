@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
-import { CharizardxxStyleProp } from '../../../../Box';
-import { CharizardxxTheme } from '../../../../CharizardxxProvider';
+import { MantineStyleProp } from '../../../../Box';
+import { MantineTheme } from '../../../../MantineProvider';
 
 interface ResolveStyleInput {
-  style: CharizardxxStyleProp | undefined;
-  theme: CharizardxxTheme;
+  style: MantineStyleProp | undefined;
+  theme: MantineTheme;
 }
 
 export function resolveStyle({ style, theme }: ResolveStyleInput): CSSProperties {

@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../MantineProvider';
 import { px } from '../units-converters';
 import { getBreakpointValue } from './get-breakpoint-value';
 

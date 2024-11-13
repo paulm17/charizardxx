@@ -1,14 +1,13 @@
 import { act, renderHook } from '@testing-library/react';
-import { vi } from 'vitest';
 import { useThrottledState } from './use-throttled-state';
 
 describe('useThrottledState', () => {
   beforeEach(() => {
-    vi.useFakeTimers();
+    jest.useFakeTimers();
   });
 
   afterEach(() => {
-    vi.useRealTimers();
+    jest.useRealTimers();
   });
 
   it('should update value with throttling', () => {
@@ -22,13 +21,13 @@ describe('useThrottledState', () => {
     expect(hook.result.current[0]).toBe(1);
 
     act(() => {
-      vi.advanceTimersByTime(100);
+      jest.advanceTimersByTime(100);
     });
 
     expect(hook.result.current[0]).toBe(3);
 
     act(() => {
-      vi.advanceTimersByTime(100);
+      jest.advanceTimersByTime(100);
 
       hook.result.current[1](4);
     });
@@ -37,7 +36,7 @@ describe('useThrottledState', () => {
   });
 
   it('should clear timeout on unmount', () => {
-    const clearTimeoutSpy = vi.spyOn(window, 'clearTimeout');
+    const clearTimeoutSpy = jest.spyOn(window, 'clearTimeout');
     const hook = renderHook(() => useThrottledState(0, 100));
 
     act(() => {
@@ -46,7 +45,7 @@ describe('useThrottledState', () => {
     });
 
     hook.unmount();
-    vi.advanceTimersByTime(100);
+    jest.advanceTimersByTime(100);
 
     expect(hook.result.current[0]).toBe(1);
     expect(clearTimeoutSpy).toHaveBeenCalledTimes(1);

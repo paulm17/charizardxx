@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
-import { CharizardxxStyleProp } from '../../../Box';
-import { CharizardxxTheme } from '../../../CharizardxxProvider';
+import { MantineStyleProp } from '../../../Box';
+import { MantineTheme } from '../../../MantineProvider';
 import { GetStylesApiOptions } from '../../styles-api.types';
 import { getThemeStyles } from './get-theme-styles/get-theme-styles';
 import { resolveStyle } from './resolve-style/resolve-style';
@@ -11,13 +11,13 @@ export type _Styles =
   | undefined
   | Partial<Record<string, CSSProperties>>
   | ((
-      theme: CharizardxxTheme,
+      theme: MantineTheme,
       props: Record<string, any>,
       ctx: Record<string, any> | undefined
     ) => Partial<Record<string, CSSProperties>>);
 
 export interface GetStyleInput {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   themeName: string[];
   selector: string;
   rootSelector: string;
@@ -25,9 +25,10 @@ export interface GetStyleInput {
   props: Record<string, any>;
   stylesCtx: Record<string, any> | undefined;
   styles: _Styles;
-  style: CharizardxxStyleProp | undefined;
+  style: MantineStyleProp | undefined;
   vars: VarsResolver | undefined;
   varsResolver: VarsResolver | undefined;
+  headless?: boolean;
   withStylesTransform?: boolean;
 }
 
@@ -43,6 +44,7 @@ export function getStyle({
   style,
   vars,
   varsResolver,
+  headless,
   withStylesTransform,
 }: GetStyleInput): CSSProperties {
   return {
@@ -52,7 +54,7 @@ export function getStyle({
       resolveStyles({ theme, styles: options?.styles, props: options?.props || props, stylesCtx })[
         selector
       ]),
-    ...resolveVars({ theme, props, stylesCtx, vars, varsResolver, selector, themeName }),
+    ...resolveVars({ theme, props, stylesCtx, vars, varsResolver, selector, themeName, headless }),
     ...(rootSelector === selector ? resolveStyle({ style, theme }) : null),
     ...resolveStyle({ style: options?.style, theme }),
   };

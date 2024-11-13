@@ -1,9 +1,9 @@
-import type { CharizardxxTheme } from '../../CharizardxxProvider';
-import type { CharizardxxStyleProp } from '../Box.types';
+import type { MantineTheme } from '../../MantineProvider';
+import type { MantineStyleProp } from '../Box.types';
 
 export function getStyleObject(
-  style: CharizardxxStyleProp | undefined,
-  theme: CharizardxxTheme
+  style: MantineStyleProp | undefined,
+  theme: MantineTheme
 ): React.CSSProperties {
   if (Array.isArray(style)) {
     return [...style].reduce<Record<string, any>>(

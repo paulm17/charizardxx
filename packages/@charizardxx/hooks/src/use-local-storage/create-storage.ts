@@ -69,7 +69,7 @@ function createStorageHandler(type: StorageType) {
 }
 
 export function createStorage<T>(type: StorageType, hookName: string) {
-  const eventName = type === 'localStorage' ? 'charizardxx-local-storage' : 'charizardxx-session-storage';
+  const eventName = type === 'localStorage' ? 'mantine-local-storage' : 'mantine-session-storage';
   const { getItem, setItem, removeItem } = createStorageHandler(type);
 
   return function useStorage({

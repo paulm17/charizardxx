@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../../../MantineProvider';
 import { rem } from '../../../../utils';
 import { borderResolver } from './border-resolver';
 
@@ -15,10 +15,10 @@ describe('@charizardxx/core/Box/border-resolver', () => {
 
   it('correctly resolves border with width, style and color', () => {
     expect(borderResolver('1px solid red', DEFAULT_THEME)).toBe(
-      `${rem('1px')} solid var(--charizardxx-color-red-filled)`
+      `${rem('1px')} solid var(--mantine-color-red-filled)`
     );
     expect(borderResolver('1rem solid red.8', DEFAULT_THEME)).toBe(
-      `${rem('1rem')} solid var(--charizardxx-color-red-8)`
+      `${rem('1rem')} solid var(--mantine-color-red-8)`
     );
     expect(borderResolver('1rem solid #000', DEFAULT_THEME)).toBe(`${rem('1rem')} solid #000`);
 
@@ -27,7 +27,7 @@ describe('@charizardxx/core/Box/border-resolver', () => {
     );
 
     expect(borderResolver('1px     solid    red   ', DEFAULT_THEME)).toBe(
-      `${rem('1px')} solid var(--charizardxx-color-red-filled)`
+      `${rem('1px')} solid var(--mantine-color-red-filled)`
     );
   });
 });

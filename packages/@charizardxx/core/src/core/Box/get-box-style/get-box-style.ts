@@ -1,16 +1,16 @@
-import type { CharizardxxTheme } from '../../CharizardxxProvider';
-import type { CharizardxxStyleProp, CssVarsProp } from '../Box.types';
+import type { MantineTheme } from '../../MantineProvider';
+import type { CssVarsProp, MantineStyleProp } from '../Box.types';
 
 interface GetBoxStyleOptions {
-  theme: CharizardxxTheme;
+  theme: MantineTheme;
   styleProps: React.CSSProperties;
-  style?: CharizardxxStyleProp;
+  style?: MantineStyleProp;
   vars?: CssVarsProp;
 }
 
 function mergeStyles(
-  styles: CharizardxxStyleProp | CssVarsProp | undefined,
-  theme: CharizardxxTheme
+  styles: MantineStyleProp | CssVarsProp | undefined,
+  theme: MantineTheme
 ): React.CSSProperties {
   if (Array.isArray(styles)) {
     return [...styles].reduce<Record<string, any>>(

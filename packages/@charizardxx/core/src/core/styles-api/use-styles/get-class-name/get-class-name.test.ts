@@ -1,8 +1,8 @@
-import { CharizardxxTheme, DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME, MantineTheme } from '../../../MantineProvider';
 import { getClassName, GetClassNameOptions } from './get-class-name';
 import { FOCUS_CLASS_NAMES } from './get-global-class-names/get-global-class-names';
 
-const THEME_WITH_CLASSNAMES: CharizardxxTheme = {
+const THEME_WITH_CLASSNAMES: MantineTheme = {
   ...DEFAULT_THEME,
   components: {
     TestComponentObject: {
@@ -26,7 +26,7 @@ const defaultOptions: GetClassNameOptions = {
   rootSelector: 'root',
   themeName: ['Test'],
   selector: 'root',
-  classNamesPrefix: 'charizardxx',
+  classNamesPrefix: 'mantine',
   classNames: undefined,
   classes: { root: 'test-root', child: 'test-child' },
   unstyled: false,
@@ -226,8 +226,8 @@ describe('@charizardxx/core/get-class-name', () => {
       ...defaultOptions,
       themeName: ['Test', 'AnotherTest'],
     });
-    expect(output.includes('charizardxx-Test-root')).toBe(true);
-    expect(output.includes('charizardxx-AnotherTest-root')).toBe(true);
+    expect(output.includes('mantine-Test-root')).toBe(true);
+    expect(output.includes('mantine-AnotherTest-root')).toBe(true);
   });
 
   it('resolves selector class correctly', () => {
@@ -247,8 +247,8 @@ describe('@charizardxx/core/get-class-name', () => {
       themeName: ['Test', 'AnotherTest'],
     });
 
-    expect(output.includes('charizardxx-Test-root')).toBe(false);
-    expect(output.includes('charizardxx-AnotherTest-root')).toBe(false);
+    expect(output.includes('mantine-Test-root')).toBe(false);
+    expect(output.includes('mantine-AnotherTest-root')).toBe(false);
     expect(output.includes('test-root')).toBe(true);
   });
 });

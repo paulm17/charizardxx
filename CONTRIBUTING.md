@@ -1,3 +1,3 @@
-# Contributing to Charizardxx
+# Contributing to Mantine
 
-Just don't.
+[View contributing guidelines on mantine.dev website](https://mantine.dev/contribute/)

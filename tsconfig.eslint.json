@@ -1,10 +1,13 @@
 {
   "include": [
+    "./docs",
     "./apps/*/src",
     "./scripts",
     "./@types",
     "./packages/@charizardxx-tests/*/src",
+    "./packages/@docs/*/src",
     "./packages/@charizardxx/*/src",
+    "./packages/@charizardxxx/*/src",
     "./jest.config.ts",
     "./jest.react.ts",
     "./jest.setup.ts",
@@ -16,9 +19,15 @@
     "./packages/@charizardxx-tests/*/esm/**/*",
     "./packages/@charizardxx-tests/*/cjs/**/*",
     "./packages/@charizardxx-tests/*/lib/**/*",
+    "./packages/@docs/*/esm/**/*",
+    "./packages/@docs/*/cjs/**/*",
+    "./packages/@docs/*/lib/**/*",
     "./packages/@charizardxx/*/lib/**/*",
     "./packages/@charizardxx/*/esm/**/*",
     "./packages/@charizardxx/*/cjs/**/*",
+    "./packages/@charizardxxx/*/esm/**/*",
+    "./packages/@charizardxxx/*/cjs/**/*",
+    "./packages/@charizardxxx/*/lib/**/*"
   ],
   "compilerOptions": {
     "types": ["node", "jest", "@testing-library/jest-dom"],
@@ -34,7 +43,9 @@
     "strict": true,
     "paths": {
       "@charizardxx/*": ["./packages/@charizardxx/*/src"],
+      "@charizardxxx/*": ["./packages/@charizardxxx/*/src"],
       "@charizardxx-tests/*": ["./packages/@charizardxx-tests/*/src"],
+      "@docs/*": ["./packages/@docs/*/src"]
     }
   }
 }

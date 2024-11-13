@@ -5,6 +5,7 @@
     "./packages/@charizardxx-tests/*/src",
     "./packages/@docs/*/src",
     "./packages/@charizardxx/*/src",
+    "./packages/@charizardxxx/*/src",
     "./apps/*"
   ],
   "exclude": [
@@ -17,7 +18,10 @@
     "./packages/@docs/*/lib/**/*",
     "./packages/@charizardxx/*/lib/**/*",
     "./packages/@charizardxx/*/esm/**/*",
-    "./packages/@charizardxx/*/cjs/**/*"
+    "./packages/@charizardxx/*/cjs/**/*",
+    "./packages/@charizardxxx/*/esm/**/*",
+    "./packages/@charizardxxx/*/cjs/**/*",
+    "./packages/@charizardxxx/*/lib/**/*"
   ],
   "compilerOptions": {
     "types": ["node", "jest", "@testing-library/jest-dom"],
@@ -35,6 +39,7 @@
     "baseUrl": ".",
     "paths": {
       "@charizardxx/*": ["./packages/@charizardxx/*/src"],
+      "@charizardxxx/*": ["./packages/@charizardxxx/*/src"],
       "@charizardxx-tests/*": ["./packages/@charizardxx-tests/*/src"],
       "@docs/*": ["./packages/@docs/*/src"]
     }

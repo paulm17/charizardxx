@@ -1,9 +1,9 @@
 const values = {
-  text: 'var(--charizardxx-font-family)',
-  mono: 'var(--charizardxx-font-family-monospace)',
-  monospace: 'var(--charizardxx-font-family-monospace)',
-  heading: 'var(--charizardxx-font-family-headings)',
-  headings: 'var(--charizardxx-font-family-headings)',
+  text: 'var(--mantine-font-family)',
+  mono: 'var(--mantine-font-family-monospace)',
+  monospace: 'var(--mantine-font-family-monospace)',
+  heading: 'var(--mantine-font-family-headings)',
+  headings: 'var(--mantine-font-family-headings)',
 };
 
 export function fontFamilyResolver(fontFamily: unknown) {

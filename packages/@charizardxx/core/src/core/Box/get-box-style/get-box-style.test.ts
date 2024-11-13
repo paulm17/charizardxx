@@ -1,4 +1,4 @@
-import { DEFAULT_THEME } from '@charizardxx/system';
+import { DEFAULT_THEME } from '../../MantineProvider';
 import { getBoxStyle } from './get-box-style';
 
 describe('@charizardxx/core/Box/get-box-style', () => {
@@ -7,20 +7,10 @@ describe('@charizardxx/core/Box/get-box-style', () => {
     expect(getBoxStyle({ theme: DEFAULT_THEME, style: {}, styleProps: {} })).toStrictEqual({});
     expect(getBoxStyle({ theme: DEFAULT_THEME, vars: {}, styleProps: {} })).toStrictEqual({});
     expect(
-      getBoxStyle({
-        theme: DEFAULT_THEME,
-        vars: {},
-        style: {},
-        styleProps: {},
-      })
+      getBoxStyle({ theme: DEFAULT_THEME, vars: {}, style: {}, styleProps: {} })
     ).toStrictEqual({});
     expect(
-      getBoxStyle({
-        theme: DEFAULT_THEME,
-        vars: () => ({}),
-        style: () => ({}),
-        styleProps: {},
-      })
+      getBoxStyle({ theme: DEFAULT_THEME, vars: () => ({}), style: () => ({}), styleProps: {} })
     ).toStrictEqual({});
   });
 
