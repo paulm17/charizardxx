@@ -1466,23 +1466,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@charizardxx-tests/core@workspace:*, @charizardxx-tests/core@workspace:packages/@charizardxx-tests/core":
-  version: 0.0.0-use.local
-  resolution: "@charizardxx-tests/core@workspace:packages/@charizardxx-tests/core"
-  dependencies:
-    "@charizardxx/core": "workspace:*"
-    "@charizardxx/hooks": "workspace:*"
-  peerDependencies:
-    react: ^18.x || ^19.x
-    react-dom: ^18.x || ^19.x
-  languageName: unknown
-  linkType: soft
-
 "@charizardxx/core@workspace:*, @charizardxx/core@workspace:packages/@charizardxx/core":
   version: 0.0.0-use.local
   resolution: "@charizardxx/core@workspace:packages/@charizardxx/core"
   dependencies:
-    "@charizardxx-tests/core": "workspace:*"
     "@charizardxx/hooks": "workspace:*"
     "@floating-ui/react": "npm:^0.26.27"
     clsx: "npm:^2.1.1"
@@ -1491,7 +1478,7 @@ __metadata:
     react-textarea-autosize: "npm:8.5.4"
     type-fest: "npm:^4.26.1"
   peerDependencies:
-    "@charizardxx/hooks": 7.14.0
+    "@charizardxx/hooks": 0.0.8
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
   languageName: unknown

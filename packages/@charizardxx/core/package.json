@@ -1,6 +1,6 @@
 {
   "name": "@charizardxx/core",
-  "version": "7.14.0",
+  "version": "0.0.8",
   "description": "React components library focused on usability, accessibility and developer experience",
   "homepage": "https://mantine.dev/",
   "license": "MIT",
@@ -43,7 +43,7 @@
     "directory": "packages/@charizardxx/core"
   },
   "peerDependencies": {
-    "@charizardxx/hooks": "7.14.0",
+    "@charizardxx/hooks": "0.0.8",
     "react": "^18.x || ^19.x",
     "react-dom": "^18.x || ^19.x"
   },
@@ -56,7 +56,6 @@
     "type-fest": "^4.26.1"
   },
   "devDependencies": {
-    "@charizardxx-tests/core": "workspace:*",
     "@charizardxx/hooks": "workspace:*"
   }
 }
