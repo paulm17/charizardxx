@@ -3459,9 +3459,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pigment-css/react@npm:^0.0.26":
-  version: 0.0.26
-  resolution: "@pigment-css/react@npm:0.0.26"
+"@pigment-css/react@npm:^0.0.27":
+  version: 0.0.27
+  resolution: "@pigment-css/react@npm:0.0.27"
   dependencies:
     "@babel/core": "npm:^7.26.0"
     "@babel/helper-module-imports": "npm:^7.25.9"
@@ -3475,9 +3475,9 @@ __metadata:
     "@emotion/styled": "npm:^11.13.0"
     "@mui/system": "npm:^6.1.6"
     "@mui/utils": "npm:^6.1.6"
-    "@wyw-in-js/processor-utils": "npm:^0.5.4"
-    "@wyw-in-js/shared": "npm:^0.5.4"
-    "@wyw-in-js/transform": "npm:^0.5.4"
+    "@wyw-in-js/processor-utils": "npm:^0.5.5"
+    "@wyw-in-js/shared": "npm:^0.5.5"
+    "@wyw-in-js/transform": "npm:^0.5.5"
     clsx: "npm:^2.1.1"
     cssesc: "npm:^3.0.0"
     csstype: "npm:^3.1.3"
@@ -3486,23 +3486,23 @@ __metadata:
     stylis-plugin-rtl: "npm:^2.1.1"
   peerDependencies:
     react: ^17.0.0 || ^18.0.0
-  checksum: 10c0/e1a768136342907e3a2313e28d4397bee29b09619c1648552f64eb8a9901cb0dfea2699e85e1f032891fdb39c16c072541bc027a9154ef2fece91e2ed8cc4231
+  checksum: 10c0/814fb47c22f3b658afa62bca89dd7d9be04ff083d120708fbd9f69a833042c2c3a4b1a6ec2d31942def2588b11992896de5bef05b4577d726686b5c2ede430dd
   languageName: node
   linkType: hard
 
-"@pigment-css/vite-plugin@npm:^0.0.26":
-  version: 0.0.26
-  resolution: "@pigment-css/vite-plugin@npm:0.0.26"
+"@pigment-css/vite-plugin@npm:^0.0.27":
+  version: 0.0.27
+  resolution: "@pigment-css/vite-plugin@npm:0.0.27"
   dependencies:
     "@babel/core": "npm:^7.26.0"
     "@babel/preset-typescript": "npm:^7.26.0"
-    "@pigment-css/react": "npm:^0.0.26"
-    "@wyw-in-js/shared": "npm:^0.5.4"
-    "@wyw-in-js/transform": "npm:^0.5.4"
+    "@pigment-css/react": "npm:^0.0.27"
+    "@wyw-in-js/shared": "npm:^0.5.5"
+    "@wyw-in-js/transform": "npm:^0.5.5"
     babel-plugin-define-var: "npm:^0.1.0"
   peerDependencies:
     vite: ^4.0.0 || ^5.0.0
-  checksum: 10c0/13684e45da7e1b79978723941771782293615799e3b07814e0d4a4717841924bd049e5a4f3f393e4a4646369cbf5589401c18d37d133901cb872cbc6bcd815d8
+  checksum: 10c0/a1f19c751f7ecee5aa88863c9e9c5163351942a3f6614f36d659fa3b13b8dd47889499f4d8d9d5707beac03b0ef069d5cb852571dffca96328ef211e0fe709da
   languageName: node
   linkType: hard
 
@@ -5672,7 +5672,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/processor-utils@npm:0.5.5, @wyw-in-js/processor-utils@npm:^0.5.4":
+"@wyw-in-js/processor-utils@npm:0.5.5, @wyw-in-js/processor-utils@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/processor-utils@npm:0.5.5"
   dependencies:
@@ -5682,7 +5682,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/shared@npm:0.5.5, @wyw-in-js/shared@npm:^0.5.4":
+"@wyw-in-js/shared@npm:0.5.5, @wyw-in-js/shared@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/shared@npm:0.5.5"
   dependencies:
@@ -5693,7 +5693,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wyw-in-js/transform@npm:^0.5.4":
+"@wyw-in-js/transform@npm:^0.5.5":
   version: 0.5.5
   resolution: "@wyw-in-js/transform@npm:0.5.5"
   dependencies:
@@ -12758,8 +12758,8 @@ __metadata:
     "@floating-ui/react": "npm:^0.26.27"
     "@hello-pangea/dnd": "npm:^16.3.0"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.3.1"
-    "@pigment-css/react": "npm:^0.0.26"
-    "@pigment-css/vite-plugin": "npm:^0.0.26"
+    "@pigment-css/react": "npm:^0.0.27"
+    "@pigment-css/vite-plugin": "npm:^0.0.27"
     "@rollup/plugin-alias": "npm:^5.1.1"
     "@rollup/plugin-node-resolve": "npm:^15.3.0"
     "@rollup/plugin-replace": "npm:^6.0.1"
@@ -18555,7 +18555,7 @@ __metadata:
   dependencies:
     "@charizardxx/core": "workspace:*"
     "@charizardxx/hooks": "workspace:*"
-    "@pigment-css/vite-plugin": "npm:^0.0.26"
+    "@pigment-css/vite-plugin": "npm:^0.0.27"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
