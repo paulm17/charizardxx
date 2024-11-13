@@ -23,7 +23,9 @@ export async function getPackageBuildOrder(
     ...pkg.packageJson.dependencies,
     ...pkg.packageJson.devDependencies,
   })
-    .filter((dependency) => dependency.includes('@charizardxx/') || dependency.includes('@charizardxxx/'))
+    .filter(
+      (dependency) => dependency.includes('@charizardxx/') || dependency.includes('@charizardxxx/')
+    )
     .map((dependency) => packages.find((pkgItem) => pkgItem.packageJson.name === dependency));
 
   if (dependencies.length === 0) {

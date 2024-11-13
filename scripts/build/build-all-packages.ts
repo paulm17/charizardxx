@@ -1,7 +1,7 @@
 // prettier-ignore
 import chalk from 'chalk';
 
-import { generateCSS } from './generate-css';
+// import { generateCSS } from './generate-css';
 import { createLogger } from '../utils/signale';
 import { buildPackage } from './build-package';
 import { getBuildTime } from './get-build-time';
@@ -23,7 +23,7 @@ export async function buildAllPackages() {
     }
   }
 
-  await generateCSS();
+  // await generateCSS();
 
   logger.success(`All packages have been built in ${chalk.green(getBuildTime(startTime))}`);
 
