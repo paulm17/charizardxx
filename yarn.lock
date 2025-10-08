@@ -1478,7 +1478,7 @@ __metadata:
     react-textarea-autosize: "npm:8.5.4"
     type-fest: "npm:^4.26.1"
   peerDependencies:
-    "@charizardxx/hooks": 8.1.0
+    "@charizardxx/hooks": 8.2.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
   languageName: unknown
