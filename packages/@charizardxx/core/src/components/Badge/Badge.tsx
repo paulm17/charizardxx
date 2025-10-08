@@ -151,7 +151,7 @@ export const Badge = polymorphicFactory<BadgeFactory>((_props, ref) => {
   return (
     <Box
       variant={variant}
-      autoCapitalize="false"
+      autoCapitalize="one"
       mod={[
         {
           block: fullWidth,
